@@ -1,84 +1,89 @@
 import Link from 'next/link'
 import Head from '../components/head'
-import Nav from '../components/nav'
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
-export default () => (
-  <div>
-    <Head title="Home" />
-    <Nav />
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  button: {
+    paddingLeft: '40px',
+    paddingRight: '40px',
+    margin: theme.spacing.unit,
+  },
+  logo: {
+    width: '70vw',
+    display: 'flex',
+    justifyContent: 'center',
+  },
 
-    <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">To get started, edit <code>pages/index.js</code> and save to reload.</p>
+  link: {
+    marginTop: '1%',
+    marginLeft: '40%',
+    marginRight: '40%',
+    resize: 'both',
+    maxHeight: '5vw',
+  },
 
-      <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
+  title: {
+    fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
+    marginTop: '2vw',
+    width: '100%',
+    paddingTop: '0',
+    lineHeight: '1.15',
+    textAlign: 'center',
+    fontSize: '48px',
+  },
+});
+
+const Home = (props) => {
+  const {classes} = props;
+
+  return(
+  <div className={classes.root}>
+    <Head title="Travel Quiz"/>
+    <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
+      <img className={classes.logo} src="/static/assets/Logo_EaiViajanteT.png"/>
+      <h1 className={classes.title}>Travel Quiz</h1>
+      <Button variant="extendedFab" className={classes.button}>
+        Clique aqui para começar
+      </Button>
+    <h3 style={{maxWidth: '880px', marginTop: '12vw', marginBottom: '2vw', display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+        Nos siga nas redes sociais:
+    </h3>
+
+    <Grid container direction={"row"} justify={"center"} alignItems={"center"}>
+        <Link href="https://www.facebook.com/eaiviajante/">
+          <a target="_blank">
+            <img className={classes.link}src="/static/assets/facebook-logo.svg"/>
           </a>
         </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the <code>create-next-app</code> site
-            </p>
+        <Link href="https://www.facebook.com/eaiviajante/">
+          <a target="_blank">
+            <img className={classes.link}src="/static/assets/facebook-logo.svg"/>
+          </a>
+        </Link><Link href="https://www.facebook.com/eaiviajante/">
+          <a target="_blank">
+            <img className={classes.link}src="/static/assets/facebook-logo.svg"/>
           </a>
         </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
-      </div>
-    </div>
-
+        </Grid>
     <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
+      :global(body) {
         margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
+        font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
       }
-      .title, .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9B9B9B;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
+      .
     `}</style>
+    </Grid>
   </div>
-)
+)}
+
+Home.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Home)
