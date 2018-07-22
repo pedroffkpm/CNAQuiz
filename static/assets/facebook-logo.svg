@@ -1,1 +1,12 @@
-<svg enable-background="new 0 0 510 510" height="510" viewBox="0 0 510 510" width="510" xmlns="http://www.w3.org/2000/svg"><path d="m459 0h-408c-28.05 0-51 22.95-51 51v408c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51v-408c0-28.05-22.95-51-51-51zm-25.5 51v76.5h-51c-15.3 0-25.5 10.2-25.5 25.5v51h76.5v76.5h-76.5v178.5h-76.5v-178.5h-51v-76.5h51v-63.75c0-48.45 40.8-89.25 89.25-89.25z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="530px" height="530px" viewBox="0 0 530 530" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="facebook-logo" transform="translate(10.000000, 10.000000)" fill-rule="nonzero" stroke="#000000" stroke-width="20">
+            <path d="M459,0 L51,0 C22.95,0 0,22.95 0,51 L0,459 C0,487.05 22.95,510 51,510 L459,510 C487.05,510 510,487.05 510,459 L510,51 C510,22.95 487.05,0 459,0 Z M433.5,51 L433.5,127.5 L382.5,127.5 C367.2,127.5 357,137.7 357,153 L357,204 L433.5,204 L433.5,280.5 L357,280.5 L357,459 L280.5,459 L280.5,280.5 L229.5,280.5 L229.5,204 L280.5,204 L280.5,140.25 C280.5,91.8 321.3,51 369.75,51 L433.5,51 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
