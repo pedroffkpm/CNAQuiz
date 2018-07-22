@@ -19,7 +19,11 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'center',
   },
-
+  list: {
+    margin: '40',
+    padding: '40px',
+    border: '1px solid #DDD',
+  },
   link: {
     marginTop: '1%',
     marginLeft: '40%',
@@ -55,7 +59,7 @@ const Home = (props) => {
         Nos siga nas redes sociais:
     </h3>
 
-    <Grid container direction={"row"} justify={"center"} alignItems={"center"}>
+    <Grid container direction={"row"} justify={"center"} alignItems={"center"} className={classes.list}>
         <Link href="https://www.facebook.com/eaiviajante/">
           <a target="_blank">
             <img className={classes.link}src="/static/assets/facebook-logo.svg"/>
