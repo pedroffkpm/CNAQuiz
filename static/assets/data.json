@@ -1,0 +1,332 @@
+{
+	"currentRound": 0,
+	"currentQuestion": "first",
+	"numberOfRounds": 9,
+	"isSubscribed": false,
+	"categories": ["aventura", "relax", "audacioso", "turista", "consciente", "top", "convencional"],
+	"questions":
+	[
+		{
+			"title": "Qual selfie do gato mais define seus stories?",
+			"options": [
+				{
+					"image": "catchrist.png",
+					"title": "No Cristo Redentor",
+					"value":  {
+						"turista": 2,
+						"convencional": 3
+					}
+				},
+				{
+					"image": "catpark.png",
+					"title": "No parque",
+					"value":  {
+						"aventura": 3,
+						"relax": 2
+					}	
+				},
+				{
+					"image": "catparty.png",
+					"title": "Na balada",
+					"value":  {
+						"audacioso": 2
+					}
+				},
+				{
+					"image": "catroller.png",
+					"title": "Na montanha-russa",
+					"value":  {
+						"audacioso": 4, 
+						"turista": 1               	
+					}
+				}
+			]
+		},
+
+		{
+			"title": "Qual drink do Starbucks é mais comprado por você?",
+			"options": [
+				{
+					"image": "unicorn.jpeg",
+					"title": "Frappuccino Unicórnio",
+					"value":  {
+						"audacioso": 4, 
+						"turista": 2,
+						"top": 3               	
+					}
+				},
+				{
+					"image": "americano.jpg",
+					"title": "Americano ou Latte",
+					"value":  {
+						"convencional": 3, 
+						"economico": 2               	
+					}
+				},
+				{
+					"image": "frapuccino.jpeg",
+					"title": "Frapuccinos de Chocolate",
+					"value":  {
+						"audacioso": 3, 
+						"top": 2,
+						"turista": 1             	
+					}
+				},
+				{
+					"image": "wallet.jpg",
+					"title": "Nenhum, meu plano não cobre Starbucks!",
+					"value":  {
+						"economico": 3							          
+					}
+				}
+			]
+		},
+		{
+			"title": "Se você ganhasse uma volta ao mundo em 80 dias começando amanhã tudo free, você marca:",
+			"options": [
+				{
+					"image": "volta1.jpg",
+					"title": "Confirma!",
+					"value":  {
+						"audacioso": 2, 
+						"economico": 1,
+						"turista": 3							          
+					}
+				},
+				{
+					"image": "volta2.jpg",
+					"title": "Interesse!",
+					"value":  {
+						"audacioso": 1, 
+						"consciente": 1,
+						"turista": 2							          
+					}
+				},
+				{
+					"image": "volta3.jpg",
+					"title": "Nem pensar",
+					"value":  {
+						"relax": 3, 
+						"top": 1														          
+					}
+				},
+				{
+					"image": "volta4.jpg",
+					"title": "Isso não é possível, a Terra é plana.",
+					"value":  { }
+				}
+			]
+		},
+		{
+			"title": "Você está na China e chegam pra você com uma barata frita, você:",
+			"options": [
+				{
+					"image": "china1.jpg",
+					"title": "Olá, tenho interesse!",
+					"value":  {
+						"audacioso": 3																							     
+					}
+				},
+				{
+					"image": "china2.jpg",
+					"title": "Se for barato, vamo lá!",
+					"value":  {
+						"audacioso": 2, 
+						"consciente": 3 																							     
+					}
+				},
+				{
+					"image": "china3.jpg",
+					"title": "Não tem pão não?",
+					"value":  {
+						"convencional": 2																							     
+					}
+				},
+				{
+					"image": "china4.jpg",
+					"title": "Saio correndo, deus me livre",
+					"value":  {
+						"convencional": 3																							     
+					}
+				}
+			]
+		},
+		{
+			"title": "Escolha um super poder para viagem",
+			"options": [
+				{
+					"image": "poder1.jpg",
+					"title": "Levitar suas mohilas e sacolas",
+					"value":  {
+						"top": 2,
+						"turista": 1 																							     
+					}
+				},
+				{
+					"image": "poder2.jpg",
+					"title": "Não ter sono nem cansaço",
+					"value":  {
+						"turista": 3																							     
+					}
+				},
+				{
+					"image": "poder3.jpg",
+					"title": "Ter repelente e protetor embutido na pele",
+					"value":  {
+						"aventura": 3																							     
+					}
+				},
+				{
+					"image": "poder4.jpg",
+					"title": "Não se esquecer de nada de lá!",
+					"value":  {
+						"top": 2,
+						"turista": 1,
+						"relax": 3,
+						"convencional": 1 																							     
+					}
+				}
+			]
+		},
+		{"title": "Escolhe uma mata",
+			"options": [
+				{
+					"image": "mata1.jpg",
+					"title": "Vanessa da Mata",
+					"value":  {
+
+					}
+				},
+				{
+					"image": "mata2.jpg",
+					"title": "Mata Atlântica",
+					"value":  {
+						"aventura": 3 																							     
+					}
+				},
+				{
+					"image": "mata3.jpeg",
+					"title": "Mata mata",
+					"value":  {
+
+					}
+				},
+				{
+					"image": "mata4.jpeg",
+					"title": "Matcha latte",
+					"value":  {
+						"audacioso": 3 																							     
+					}
+				}
+			]
+		},
+		{
+			"title": "Qual imagem melhor define suas jantas?",
+			"options": [
+				{
+					"image": "comida1.jpeg",
+					"title": "Restaurante gourmet",
+					"value":  {
+						"top": 3																							     
+					}
+				},
+				{
+					"image": "comida2.jpg",
+					"title": "Comida de rua local",
+					"value":  {
+						"audacioso": 3,
+						"turista": 1,
+						"consciente": 1 																							     
+					}
+				},
+				{
+					"image": "comida3.jpeg",
+					"title": "Fast food",
+					"value":  {
+						"consciente": 2, 
+						"convencional":	2																						     
+					}
+				},
+				{
+					"image": "comida4.jpeg",
+					"title": "Comida feita em casa",
+					"value":  {
+						"convencional": 1,
+						"consciente": 3 																							     
+					}
+				}
+			]
+		},
+		{
+			"title": "Qual hotel você mais se identifica?",
+			"options": [
+				{
+					"image": "hotel1.jpg",
+					"title": "Perto da praia",
+					"value":  {
+						"relax": 3																							     
+					}
+				},
+				{
+					"image": "hotel2.jpg",
+					"title": "Perto da mata",
+					"value":  {
+						"aventura": 3																						     
+					}
+				},
+				{
+					"image": "hotel3.jpg",
+					"title": "Perto da cidade",
+					"value":  {
+						"turista": 3, 
+						"convencional": 1																							     
+					}
+				},
+				{
+					"image": "hotel4.jpg",
+					"title": "Qualquer canto dormível",
+					"value":  {
+						"consciente": 3																						     
+					}
+				}
+			]
+		},
+		{
+			"title": "Se o papo for planejamento, você",
+			"options": [
+				{
+					"image": "plan1.jpg",
+					"title": "Não deixa pra depois",
+					"value":  {
+						"consciente": 3																						     
+					}
+				},
+				{
+					"image": "plan2.jpeg",
+					"title": "Procrastina igual aos trabalhos",
+					"value":  {
+						"consciente": 1																					     
+					}
+				},
+				{
+					"image": "plan3.jpeg",
+					"title": "Pede pra alguém fazer o trabalho sujo",
+					"value":  {
+						"consciente": 2,
+						"top": 3 																							     
+					}
+				},
+				{
+					"image": "plan4.jpg",
+					"title": "Vai na fé",
+					"value":  {
+						"relax": 3,
+						"top": 2 																							     
+					}
+				}
+			]
+		}
+
+	],
+"userScore": {}
+}
