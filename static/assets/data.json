@@ -1,9 +1,5 @@
 {
-	"currentRound": 0,
-	"currentQuestion": "first",
 	"numberOfRounds": 9,
-	"isSubscribed": false,
-	"categories": ["aventura", "relax", "audacioso", "turista", "consciente", "top", "convencional"],
 	"questions":
 	[
 		{
@@ -327,6 +323,5 @@
 			]
 		}
 
-	],
-"userScore": {}
+	]
 }

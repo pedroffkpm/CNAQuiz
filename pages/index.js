@@ -50,7 +50,7 @@ const Home = (props) => {
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
                 <img className={classes.logo} src="/static/assets/Logo_EaiViajanteT.png" />
                 <h1 className={classes.title}>Travel Quiz</h1>
-                <Link href='/quiz/'>
+                <Link href='/quiz'>
                 <Button variant="extendedFab" className={classes.button}>
                     Clique aqui para começar
       </Button>
