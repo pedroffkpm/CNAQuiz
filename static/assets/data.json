@@ -3,6 +3,7 @@
 	"questions":
 	[
 		{
+			"id": 0,
 			"title": "Qual selfie do gato mais define seus stories?",
 			"options": [
 				{
@@ -40,6 +41,7 @@
 		},
 
 		{
+			"id": 1,
 			"title": "Qual drink do Starbucks é mais comprado por você?",
 			"options": [
 				{
@@ -78,6 +80,7 @@
 			]
 		},
 		{
+			"id": 2,
 			"title": "Se você ganhasse uma volta ao mundo em 80 dias começando amanhã tudo free, você marca:",
 			"options": [
 				{
@@ -114,6 +117,7 @@
 			]
 		},
 		{
+			"id": 3,
 			"title": "Você está na China e chegam pra você com uma barata frita, você:",
 			"options": [
 				{
@@ -148,6 +152,7 @@
 			]
 		},
 		{
+			"id": 4,
 			"title": "Escolha um super poder para viagem",
 			"options": [
 				{
@@ -184,7 +189,9 @@
 				}
 			]
 		},
-		{"title": "Escolhe uma mata",
+		{
+			"id": 5,
+			"title": "Escolhe uma mata",
 			"options": [
 				{
 					"image": "mata1.jpg",
@@ -217,6 +224,7 @@
 			]
 		},
 		{
+			"id": 6,
 			"title": "Qual imagem melhor define suas jantas?",
 			"options": [
 				{
@@ -254,6 +262,7 @@
 			]
 		},
 		{
+			"id": 7,
 			"title": "Qual hotel você mais se identifica?",
 			"options": [
 				{
@@ -288,6 +297,7 @@
 			]
 		},
 		{
+			"id": 8,
 			"title": "Se o papo for planejamento, você",
 			"options": [
 				{

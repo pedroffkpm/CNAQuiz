@@ -4,7 +4,6 @@ export default async function subscribeToNewsletter(email) {
     const data = {
         EMAIL: email,
     };
-    console.log(process.env);
 
     jquery.ajax(
             {

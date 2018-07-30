@@ -13,10 +13,11 @@ app.prepare()
       const parsedUrl = parse(req.url, true)
       const { pathname, query } = parsedUrl
 
-      if (pathname === '/quiz') {
-        const actualPage = "/quizPage"
+      if (pathname === '/subscribe/:id') {
+        const actualPage = "/subscribe"
+        const queryParams = { id: req.params.id }
 
-        app.render(req, res, actualPage, query)
+        app.render(req, res, actualPage, queryParams)
       } else {
         handle(req, res, parsedUrl)
       }

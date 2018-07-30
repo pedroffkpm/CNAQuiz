@@ -67,109 +67,20 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
-module.exports = require("react");
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = require("prop-types");
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/styles");
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Button");
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Grid");
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-module.exports = require("next/link");
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/regenerator");
-
-/***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(15);
-
-
-/***/ }),
-/* 15 */
+/***/ "./components/help/mailchimpHelp.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-
-// EXTERNAL MODULE: external "@babel/runtime/regenerator"
-var regenerator_ = __webpack_require__(6);
-var regenerator__default = /*#__PURE__*/__webpack_require__.n(regenerator_);
-
-// EXTERNAL MODULE: external "next/link"
-var link_ = __webpack_require__(5);
-var link__default = /*#__PURE__*/__webpack_require__.n(link_);
-
-// EXTERNAL MODULE: external "prop-types"
-var external__prop_types_ = __webpack_require__(1);
-var external__prop_types__default = /*#__PURE__*/__webpack_require__.n(external__prop_types_);
-
-// EXTERNAL MODULE: external "@material-ui/core/styles"
-var styles_ = __webpack_require__(2);
-var styles__default = /*#__PURE__*/__webpack_require__.n(styles_);
-
-// EXTERNAL MODULE: external "@material-ui/core/Button"
-var Button_ = __webpack_require__(3);
-var Button__default = /*#__PURE__*/__webpack_require__.n(Button_);
-
-// EXTERNAL MODULE: external "@material-ui/core/TextField"
-var TextField_ = __webpack_require__(16);
-var TextField__default = /*#__PURE__*/__webpack_require__.n(TextField_);
-
-// EXTERNAL MODULE: external "@material-ui/core/Grid"
-var Grid_ = __webpack_require__(4);
-var Grid__default = /*#__PURE__*/__webpack_require__.n(Grid_);
-
-// EXTERNAL MODULE: external "react"
-var external__react_ = __webpack_require__(0);
-var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
-
-// EXTERNAL MODULE: external "jquery"
-var external__jquery_ = __webpack_require__(17);
-var external__jquery__default = /*#__PURE__*/__webpack_require__.n(external__jquery_);
-
-// CONCATENATED MODULE: ./components/help/mailchimpHelp.js
+/* harmony export (immutable) */ __webpack_exports__["a"] = subscribeToNewsletter;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("@babel/runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__("jquery");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
 
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
@@ -182,17 +93,16 @@ function subscribeToNewsletter(_x) {
 function _subscribeToNewsletter() {
   _subscribeToNewsletter = _asyncToGenerator(
   /*#__PURE__*/
-  regenerator__default.a.mark(function _callee(email) {
+  __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(email) {
     var data;
-    return regenerator__default.a.wrap(function _callee$(_context) {
+    return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             data = {
               EMAIL: email
             };
-            console.log(process.env);
-            external__jquery__default.a.ajax({
+            __WEBPACK_IMPORTED_MODULE_1_jquery___default.a.ajax({
               url: "https://eaiviajante.us18.list-manage.com/subscribe/post-json?u=825b9b7c924a9c0d4528fe92c&amp;id=3e972f9aa9&c=?",
               type: 'GET',
               data: data,
@@ -208,7 +118,7 @@ function _subscribeToNewsletter() {
               }
             });
 
-          case 3:
+          case 2:
           case "end":
             return _context.stop();
         }
@@ -217,12 +127,38 @@ function _subscribeToNewsletter() {
   }));
   return _subscribeToNewsletter.apply(this, arguments);
 }
-// CONCATENATED MODULE: ./pages/subscribe.js
+
+/***/ }),
+
+/***/ "./pages/subscribe.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("@babel/runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link__ = __webpack_require__("next/link");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__ = __webpack_require__("@material-ui/core/Button");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_TextField__ = __webpack_require__("@material-ui/core/TextField");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_TextField___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_TextField__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid__ = __webpack_require__("@material-ui/core/Grid");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_help_mailchimpHelp__ = __webpack_require__("./components/help/mailchimpHelp.js");
+
+var _jsxFileName = "/Users/pedro/Dropbox (DeveloperAcademy-BR)/CNAQuiz/pages/subscribe.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function subscribe__asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -250,11 +186,6 @@ var styles = function styles(theme) {
     root: {
       flexGrow: 1
     },
-    button: {
-      paddingLeft: '40px',
-      paddingRight: '40px',
-      margin: theme.spacing.unit
-    },
     logo: {
       width: '70vw',
       display: 'flex',
@@ -271,7 +202,7 @@ var styles = function styles(theme) {
     },
     title: {
       fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
-      marginTop: '0',
+      marginTop: '5vw',
       marginBottom: '2vw',
       width: '100%',
       paddingTop: '0',
@@ -284,7 +215,7 @@ var styles = function styles(theme) {
 
 var emailRegEx = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)\b/;
 
-var subscribe_Subscribe =
+var Subscribe =
 /*#__PURE__*/
 function (_Component) {
   _inherits(Subscribe, _Component);
@@ -300,16 +231,16 @@ function (_Component) {
       enumerable: true,
       writable: true,
       value: function () {
-        var _value = subscribe__asyncToGenerator(
+        var _value = _asyncToGenerator(
         /*#__PURE__*/
-        regenerator__default.a.mark(function _callee(e) {
-          return regenerator__default.a.wrap(function _callee$(_context) {
+        __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(e) {
+          return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
                   e.preventDefault();
                   _context.next = 3;
-                  return subscribeToNewsletter(_this.state.email);
+                  return Object(__WEBPACK_IMPORTED_MODULE_8__components_help_mailchimpHelp__["a" /* default */])(_this.state.email);
 
                 case 3:
                 case "end":
@@ -351,25 +282,79 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return external__react__default.a.createElement(Grid__default.a, {
+      var classes = this.props.classes;
+      console.log(this.props.id);
+      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+        className: classes.root,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
         container: true,
         spacing: 40,
         direction: "column",
         justify: "center",
-        alignItems: "center"
-      }, external__react__default.a.createElement("form", {
-        onSubmit: this.onSubmit
-      }, external__react__default.a.createElement(Grid__default.a, {
+        alignItems: "center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("form", {
+        onSubmit: this.onSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
         item: true,
-        xs: true
-      }, external__react__default.a.createElement("h2", null, " Quase l\xE1! ")), external__react__default.a.createElement(Grid__default.a, {
+        xs: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
+        className: classes.title,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        }
+      }, " Quase l\xE1! ")), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
         item: true,
-        xs: true
-      }, external__react__default.a.createElement("p", null, " Cadastre o seu e-mail para ficar por dentro de todas as nossas novidades! ")), external__react__default.a.createElement(Grid__default.a, {
+        xs: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", {
+        style: {
+          marginTop: '10vw',
+          marginBottom: '2vw',
+          fontFamily: 'Arial'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        }
+      }, "Cadastre o seu e-mail para ficar por dentro de todas as nossas novidades!")), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
         item: true,
-        xs: true
-      }, external__react__default.a.createElement(TextField__default.a, {
+        xs: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+        style: {
+          marginLeft: '4vw',
+          marginRight: '4vw'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_TextField___default.a, {
         required: true,
+        fullWidth: true,
         placeholder: "exemplo@exemplo.com",
         label: "Email",
         type: "email",
@@ -378,38 +363,163 @@ function (_Component) {
         value: this.state.email,
         style: {
           marginTop: '2%'
-        }
-      })), external__react__default.a.createElement(Grid__default.a, {
-        item: true,
-        xs: true
-      }, external__react__default.a.createElement(Button__default.a, {
-        variant: "raised",
-        type: "submit",
-        className: "button",
-        style: {
-          marginTop: '5%'
         },
-        disabled: this.state.error
-      }, "Inscrever "))));
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        }
+      }))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
+        container: true,
+        direction: 'row',
+        justify: "center",
+        alignItems: "center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
+        item: true,
+        xs: 2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
+        href: {
+          pathname: '/result',
+          query: {
+            id: this.props.id
+          }
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default.a, {
+        variant: "extendedFab",
+        type: "submit",
+        style: {
+          marginTop: '2vw'
+        },
+        disabled: this.state.error,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        }
+      }, "Inscrever ")))))));
     }
   }]);
 
   return Subscribe;
-}(external__react_["Component"]);
+}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
 
-/* harmony default export */ var subscribe = __webpack_exports__["default"] = (Object(styles_["withStyles"])(styles)(subscribe_Subscribe));
+Subscribe.propTypes = {
+  classes: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired
+};
+
+Subscribe.getInitialProps =
+/*#__PURE__*/
+function () {
+  var _ref = _asyncToGenerator(
+  /*#__PURE__*/
+  __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee2(context) {
+    var id;
+    return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            id = context.query.id;
+            return _context2.abrupt("return", {
+              id: id
+            });
+
+          case 2:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, this);
+  }));
+
+  return function (_x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__["withStyles"])(styles)(Subscribe));
 
 /***/ }),
-/* 16 */
+
+/***/ 5:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./pages/subscribe.js");
+
+
+/***/ }),
+
+/***/ "@babel/runtime/regenerator":
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+
+/***/ "@material-ui/core/Button":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Button");
+
+/***/ }),
+
+/***/ "@material-ui/core/Grid":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Grid");
+
+/***/ }),
+
+/***/ "@material-ui/core/TextField":
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/TextField");
 
 /***/ }),
-/* 17 */
+
+/***/ "@material-ui/core/styles":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/styles");
+
+/***/ }),
+
+/***/ "jquery":
 /***/ (function(module, exports) {
 
 module.exports = require("jquery");
 
+/***/ }),
+
+/***/ "next/link":
+/***/ (function(module, exports) {
+
+module.exports = require("next/link");
+
+/***/ }),
+
+/***/ "prop-types":
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
+
+/***/ }),
+
+/***/ "react":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
 /***/ })
-/******/ ]);
+
+/******/ });
+//# sourceMappingURL=subscribe.js.map

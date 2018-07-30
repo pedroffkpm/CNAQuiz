@@ -38,17 +38,16 @@ const styles = theme => ({
     },
 });
 
-class Quiz extends Component {
+class Question extends Component {
 
     constructor(props) {
         super(props);
-        
+
     }
 
 render() {
-    const { classes, question, onClick, index } = this.props;
+    const { classes, question, onClick, id } = this.props;
     shuffle(question.options);
-
         return (
         <div className={classes.root}>
             <Grid container spacing={16} direction={"column"} justify={"center"} alignItems={"center"}>
@@ -58,23 +57,10 @@ render() {
                     </h1>
                     <Grid container spacing={40} direction={"row"} justify={"center"} alignItems={"center"}>
                         {
-                     question.options.slice(0,2).map(
-                            (option) =>
-                            <Grid item xs>
-                                <Button variant="extendedFab" onClick={() => onClick({"index": index, "value": option.value})}>
-                                {option.title}
-                                </Button>
-                            </Grid>
-                                    )
-
-                        }
-                    </Grid>
-                    <Grid container spacing={16} direction={"row"} justify={"center"} alignItems={"center"}>
-                        {
-                     question.options.slice(2).map(
-                            (option) =>
-                            <Grid item xs>
-                                <Button variant="extendedFab" onClick={() => onClick({"index": index, "value": option.value})} className={classes.button}>
+                     question.options.map(
+                            (option, index) =>
+                            <Grid item xs={6}>
+                                <Button key={index} variant="extendedFab" onClick={() => onClick({"id": id, "value": option.value})}>
                                 {option.title}
                                 </Button>
                             </Grid>
@@ -89,10 +75,10 @@ render() {
 }
 };
 
-Quiz.propTypes = {
+Question.propTypes = {
     classes: PropTypes.object.isRequired,
     question: PropTypes.object.isRequired,
     onClick: PropTypes.func
 }
 
-export default withStyles(styles)(Quiz)
+export default withStyles(styles)(Question)
