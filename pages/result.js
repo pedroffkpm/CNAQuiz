@@ -2,6 +2,7 @@ import { withStyles } from '@material-ui/core/styles';
 import categories from '../static/assets/categories.json';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button'
 
 
 const styles = theme => ({
