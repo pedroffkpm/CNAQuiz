@@ -24,7 +24,10 @@ const Result = (props) => {
     const {classes, id} = props;
     const {title, img, text} = categories[id];
     return (
-        <div/>
+        <div>
+            <h2 className={classes.title}> {categories[id]} </h2>
+            <Button> Share </Button>
+            </div>
     )
 }
 
