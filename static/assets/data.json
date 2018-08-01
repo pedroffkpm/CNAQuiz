@@ -48,9 +48,10 @@
 					"image": "unicorn.jpeg",
 					"title": "Frappuccino Unicórnio",
 					"value":  {
-						"audacioso": 4, 
-						"turista": 2,
-						"top": 3               	
+						"audacioso": 5, 
+						"turista": 1,
+						"top": 2,
+						"guloso": 3      	
 					}
 				},
 				{
@@ -58,16 +59,18 @@
 					"title": "Americano ou Latte",
 					"value":  {
 						"convencional": 3, 
-						"economico": 2               	
+						"economico": 2,
+						"guloso": 1               	
 					}
 				},
 				{
 					"image": "frapuccino.jpeg",
 					"title": "Frapuccinos de Chocolate",
 					"value":  {
-						"audacioso": 3, 
-						"top": 2,
-						"turista": 1             	
+						"audacioso": 4, 
+						"top": 3,
+						"turista": 1,
+						"guloso": 2            	
 					}
 				},
 				{
@@ -124,7 +127,8 @@
 					"image": "china1.jpg",
 					"title": "Olá, tenho interesse!",
 					"value":  {
-						"audacioso": 3																							     
+						"audacioso": 3,
+						"guloso": 2																						     
 					}
 				},
 				{
@@ -132,14 +136,16 @@
 					"title": "Se for barato, vamo lá!",
 					"value":  {
 						"audacioso": 2, 
-						"consciente": 3 																							     
+						"consciente": 3,
+						"guloso": 1																							     
 					}
 				},
 				{
 					"image": "china3.jpg",
 					"title": "Não tem pão não?",
 					"value":  {
-						"convencional": 2																							     
+						"convencional": 2,
+						"guloso": 1																							     
 					}
 				},
 				{
@@ -218,7 +224,8 @@
 					"image": "mata4.jpeg",
 					"title": "Matcha latte",
 					"value":  {
-						"audacioso": 3 																							     
+						"audacioso": 3,
+						"guloso": 2 																							     
 					}
 				}
 			]
@@ -231,7 +238,8 @@
 					"image": "comida1.jpeg",
 					"title": "Restaurante gourmet",
 					"value":  {
-						"top": 3																							     
+						"top": 3,
+						"guloso": 2																							     
 					}
 				},
 				{
@@ -240,7 +248,8 @@
 					"value":  {
 						"audacioso": 3,
 						"turista": 1,
-						"consciente": 1 																							     
+						"consciente": 1,
+						"guloso": 2 																							     
 					}
 				},
 				{
@@ -248,7 +257,8 @@
 					"title": "Fast food",
 					"value":  {
 						"consciente": 2, 
-						"convencional":	2																						     
+						"convencional":	2,
+						"guloso": 2																						     
 					}
 				},
 				{
@@ -328,6 +338,81 @@
 					"value":  {
 						"relax": 3,
 						"top": 2 																							     
+					}
+				}
+			]
+		},
+		{
+			"id": 9,
+			"title": "Na hora do tour pela cidade, você:",
+			"options": [
+				
+				{
+					"image": "tour1.jpg",
+					"title": "Vai parando em cada banca de comida",
+					"value":  {
+						"guloso": 3,
+						"turista": 1																				     
+					}
+				},
+				{
+					"image": "tour2.jpg",
+					"title": "Vai parando pra dar uma espiada nas vitrines",
+					"value":  {
+						"top": 3																					     
+					}
+				},
+				{
+					"image": "tour3.jpg",
+					"title": "Vai deitando nos bancos pra dar aquela descansada",
+					"value":  {
+						"relax": 3																					     
+					}
+				},
+				{
+					"image": "tour4.jpg",
+					"title": "Só para quando for pra tirar fotos",
+					"value":  {
+						"turista": 3,
+						"consciente": 2
+
+					}
+				}
+			]
+		},
+		{
+			"id": 10,
+			"title": "Se você tivesse um único pedido para seus próximos voos, seria:",
+			"options": [
+				
+				{
+					"image": "airplane1.JPG",
+					"title": "Uma comida melhor",
+					"value":  {
+						"guloso": 3
+																										     
+					}
+				},
+				{
+					"image": "airplane2.jpg",
+					"title": "Um acento mais confortável",
+					"value":  {
+						"relax": 3																			     
+					}
+				},
+				{
+					"image": "airplane3.jpg",
+					"title": "Ter mais espaço para levar minhas compras",
+					"value":  {
+						"top": 3												     
+					}
+				},
+				{
+					"image": "airplane4.jpg",
+					"title": "Ter permissão para levar todas as plantas exóticas",
+					"value":  {
+						"aventura": 3
+
 					}
 				}
 			]

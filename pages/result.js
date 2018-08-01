@@ -1,6 +1,7 @@
 import { withStyles } from '@material-ui/core/styles';
 import categories from '../static/assets/categories.json';
 import PropTypes from 'prop-types';
+import FacebookProvider, { Share } from 'react-facebook-sdk';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
 
@@ -21,18 +22,35 @@ const styles = theme => ({
     },
 });
 
+const findProfile = (id) => {
+    for(var index in categories) {
+        if(categories[index].id === id) {
+            return categories[index]
+        }
+    }
+
+}
+
 const Result = (props) => {
-    const {classes, id} = props;
-    const {title, img, text} = categories[id];
+    const { classes, id } = props;
+    const profile = findProfile(id);
+    const { title, img, text } = profile;
+    window.scrollTo(0,0);
     return (
         <div>
-            <h2 className={classes.title}> {categories[id]} </h2>
-            <Button> Share </Button>
-            </div>
+            <h2 className={classes.title}> {title} </h2>
+            <FacebookProvider appId='2050302261854131' xfbml>
+                <Share redirectURI="https://travelquiz.herokuapp.com">
+                    <Button> Share </Button>
+                </Share>
+            </FacebookProvider>
+        </div>
     )
 }
 
-Result.PropTypes
+Result.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
 
 Result.getInitialProps = async (context) => {
     const { id } = context.query

@@ -1,4 +1,51 @@
 
 [
-"aventura","relax", "audacioso", "turista", "economico", "consciente", "top", "convencional"
+    {
+        "id": "aventura",
+        "img": "perfilAventura.gif",
+        "title": "Voce tirou o Tigrão",
+        "text": "Você e seu bonde adoram aventuras na mata, acampamentos e tudo o que envolva ficar perto da mãe natureza!"
+     },
+	{
+		"id": "audacioso",
+		"img": "perfilAudacioso.jpg",
+		"title": "Voce tirou a Moana",
+		"text": "Você é muito curioso e não pensa muito antes de viver novas experiencias. Assim, deixa a vida te levar a lugares novos e conhece tudo que a vida tem a te oferecer."
+	},
+	{
+		"id": "turista",
+		"img": "perfilTurista.jpg",
+		"title": "Voce tirou o Russel",
+		"text": "Você é o turista que quer garantir que viu tudo que tinha que ver. O tempo na viagem voa, escorre pelas mãos, e por isso você faz de tudo para viver o máximo."
+	},
+	{
+		"id": "consciente",
+		"img": "perfilConsciente.jpg",
+		"title": "Voce tirou o Sirigueijo",
+		"text": "Você é do tipo consciente. Às vezes meio pão-duro, mas é por que não quer levar um susto com as contas de sabe se lá quantos dol."
+	},
+	{
+		"id": "convencional",
+		"img": "perfilConvencional.jpeg",
+		"title": "Voce tirou o Marlin",
+		"text": "Você é o turista que toma muito cuidado na hora de experimentar comidas e passeios alternativos, vai que dê ruim? Mesmo assim, não deixa de criar várias memórias em suas viagens!"
+	},
+	{
+		"id": "top",
+		"img": "perfilTop.jpeg",
+		"title": "Voce tirou a Elsa",
+		"text": "Suas viagens são um sonho de princesa. Você livre está para gastar uns dol a mais para ter uma viagem com mais conforto!"
+	},
+	{
+		"id": "relax",
+		"img": "perfilRelax.jpg",
+		"title": "Voce tirou o Lula Molusco",
+		"text": "Você é o turista paz e amor ✌️. Férias são para descansar e você sabe fazer isso muito bem passando um dia pleno na praia."
+	},
+	{
+		"id": "guloso",
+		"img": "perfilGuloso.png",
+		"title": "Voce tirou a Magali",
+		"text": "você é o turista que só pensa em comer! Pra você, viagem é uma oportunidade de experimentar pratos novos e deliciosos. Você sabe aproveitar cada dia muito bem, não deixando pra amanhã o que você pode comer hoje!"
+	}    
 ]

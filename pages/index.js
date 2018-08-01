@@ -6,6 +6,10 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
+    body: {
+        margin: '0',
+        fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
+    },
     root: {
         flexGrow: 1,
     },
@@ -15,6 +19,7 @@ const styles = theme => ({
         margin: theme.spacing.unit,
     },
     logo: {
+        marginTop: '4vw',
         width: '70vw',
         display: 'flex',
         justifyContent: 'center',
@@ -30,7 +35,7 @@ const styles = theme => ({
     },
 
     title: {
-        fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
+        fontFamily: 'Futura-Bold,-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
         marginTop: '0',
         marginBottom: '2vw',
         width: '100%',
@@ -45,6 +50,7 @@ const Home = (props) => {
     const { classes } = props;
 
     return (
+        <div className={classes.body}>
         <div className={classes.root}>
             <Head title="Travel Quiz" />
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
@@ -82,14 +88,8 @@ const Home = (props) => {
                         </Link>
                         </Grid>
                 </Grid>
-                <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
-      }
-      .
-    `}</style>
             </Grid>
+        </div>
         </div>
     )
 }

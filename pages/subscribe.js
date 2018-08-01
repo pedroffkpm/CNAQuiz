@@ -56,13 +56,13 @@ class Subscribe extends Component {
 
     onChange(event) {
         let newState = Object.assign({}, this.state);
-        newState["email"] = event.target.value;
+        newState.email = event.target.value;
         if (emailRegEx.test(event.target.value)) {
-            newState["error"] = false;
+            newState.error = false;
         } else if (event.target.value === "") {
-            newState["error"] = true;
+            newState.error = true;
         } else {
-            newState["error"] = true;
+            newState.error = true;
         }
 
         this.setState(newState);
@@ -70,6 +70,8 @@ class Subscribe extends Component {
 
     render() {
         const { classes } = this.props;
+        window.scrollTo(0,0);
+
         console.log(this.props.id)
         return (
             <div className={classes.root}>

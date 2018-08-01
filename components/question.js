@@ -4,6 +4,8 @@ import shuffle from './help/shuffle';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
     root: {
@@ -17,24 +19,33 @@ const styles = theme => ({
             color: theme.palette.secondary
         }
     },
-
     card: {
         maxWidth: '400',
-        margin: '500',
         padding: '30px',
         border: '2px solid black',
         borderRadius: '20px',
     },
-
+    image: {
+        marginTop: '4vw',
+        marginBottom: '1vw',
+        width: '30vw',
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    paper: {
+        height: 700,
+        width: 900,
+        padding: theme.spacing.unit * 2,
+        textAlign: 'center',
+    },
     title: {
-        fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
+        fontFamily: 'Futura-Bold,-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
         marginTop: '0',
         marginBottom: '2vw',
         width: '100%',
-        paddingTop: '0',
         lineHeight: '1.15',
         textAlign: 'center',
-        fontSize: '48px',
+        fontSize: '2vw',
     },
 });
 
@@ -45,34 +56,40 @@ class Question extends Component {
 
     }
 
-render() {
-    const { classes, question, onClick, id } = this.props;
-    shuffle(question.options);
+    render() {
+        const { classes, question, onClick, id } = this.props;
         return (
-        <div className={classes.root}>
-            <Grid container spacing={16} direction={"column"} justify={"center"} alignItems={"center"}>
-                <Grid className={classes.card} item xs>
-                    <h1 className={classes.title}>
-                        {question.title}
-                    </h1>
-                    <Grid container spacing={40} direction={"row"} justify={"center"} alignItems={"center"}>
-                        {
-                     question.options.map(
-                            (option, index) =>
-                            <Grid item xs={6}>
-                                <Button key={index} variant="extendedFab" onClick={() => onClick({"id": id, "value": option.value})}>
-                                {option.title}
-                                </Button>
-                            </Grid>
-                                    )
+            <Grid container className={classes.root} direction="column">
+                <Grid item xs={12}>
+                    <Grid container direction="column" justify="center" alignItems="center" spacing={40}>
+                        <Grid item>
+                            <Paper className={classes.paper}>
+                                <Grid container direction="column" justify="center" alignItems="center">
+                                    <Grid item xs={12}>
+                                        {question.title}
+                                    </Grid>
+                                    <Grid container spacing={8} direction={"row"} justify={"center"} alignItems={"center"}>
+                                        {
+                                            question.options.map(
+                                                (option, index) =>
+                                                    <Grid key={index} item xs={6}>
+                                                        <Button variant="extendedFab" onClick={() => onClick({ "id": id, "value": option.value })}>
+                                                            {option.title}
+                                                        </Button>
+                                                    </Grid>
+                                            )
 
-                        }
+                                        }
+                                    </Grid>
+                                </Grid>
+
+                            </Paper>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
-        </div>
-    )
-}
+        )
+    }
 };
 
 Question.propTypes = {

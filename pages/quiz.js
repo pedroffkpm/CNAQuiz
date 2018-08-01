@@ -7,28 +7,51 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Router from 'next/router' 
-
 import { Component } from 'react';
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
     },
+    logo: {
+        marginTop: '1vw',
+        marginBottom: '1vw',
+        width: '30vw',
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    button: {
+        marginTop: '5vw',
+        marginBottom:'2vw',
+    },
+    question: {
+        paddingTop: '10vw',
+        paddingBottom:'5vw',
+        marginLeft: '40vw',
+        marginRight: '40vw',
+        maxWidth:'60vw',
+        display: 'flex',
+        justifyContent: 'center',
+    }
 });
-
 class Quiz extends Component {
     constructor(props) {
         super(props);
         const {numberOfRounds, questions} = data;
         shuffle(questions);
 
-        this.state = { log:[], questions: shuffle(questions).splice(0, numberOfRounds), score:{}, profile: -1 };
+        questions.map(
+            question => shuffle(question.options)
+        )
+
+        this.state = { incomplete: true, answered: 0, log:[], questions: shuffle(questions).splice(0, numberOfRounds), score:{}, profile: "" };
 
     }
 
     calcProfile= (obj) => {
         var max = -Infinity;
         var ans = '';
+
         for (var key in obj) {
             console.log(key);
             if(obj[key] > max){
@@ -36,45 +59,54 @@ class Quiz extends Component {
                 ans = key;
             }
     }
-    return categories.indexOf(ans);
+
+    return ans
 }
 
-    handleChoice = (key) => {
-        const {id, value} = key;
-        this.state.log[id] = value;
+    onChoice = (key) => {
 
-        categories.map( //reset scores
-            category =>
-            this.state.score[category] = 0
+        let newState = Object.assign({}, this.state);
+        const profiles = categories.map(a => a.id)
+        const {id, value} = key;
+        newState.log[id] = value;
+
+        profiles.map( //reset scores
+            profile =>
+            newState.score[profile] = 0
         )
 
+        newState.answered = 0
         for(var i in this.state.log) {
-            var valueIterator = this.state.log[i]
+            var valueIterator = newState.log[i]
+            newState.answered += 1
         for(var category in valueIterator) {
-            this.state.score[category] += valueIterator[category]
+            newState.score[category] += valueIterator[category]
         }
     }
+        newState.profile = this.calcProfile(newState.score);
+        newState.incomplete = !(newState.answered === newState.questions.length)
 
-        this.state.profile = this.calcProfile(this.state.score);
+        this.setState(newState);
 
-        console.log(this.state.score);
-        console.log("profile  " + this.state.profile);
+        console.log(this.state.incomplete);
+ 
     }
 
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.root}>
-            <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
+            <div>
+            <Grid container direction={"column"} justify={"center"} alignItems={"center"}>
+            <img className={classes.logo} src="/static/assets/Logo_EaiViajanteT.png" />
             {
                 this.state.questions.map(
-                    (question) =>
-                    <Question id={question.id} question={question} onClick={(key) => this.handleChoice(key)}/>
+                    (question, index) =>
+                    <Question key={index} className={classes.question} id={question.id} question={question} onClick={(choice) => this.onChoice(choice)}/>
                 )
             }
             <br/>
                 
-            <Button variant="extendedFab" onClick={() => Router.push(`/subscribe?id=${this.state.profile}`, `/subscribe`)}>v</Button>
+            <Button className = {classes.button} variant="extendedFab" onClick={() => Router.push(`/subscribe?id=${this.state.profile}`, `/subscribe`)} disabled={this.state.incomplete}>  Avançar >  </Button>
 
             </Grid>
             </div>
