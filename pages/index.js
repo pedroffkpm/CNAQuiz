@@ -1,17 +1,21 @@
 import Link from 'next/link'
-import Head from '../components/head'
+import Head from '../components/head';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
-    body: {
-        margin: '0',
+    text: {
         fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
+        marginTop: '10vw',
+        marginBottom: '2vw',
+        display: 'flex',
+        justifyContent: 'space-around' 
     },
     root: {
         flexGrow: 1,
+        margin: 0,
     },
     button: {
         paddingLeft: '40px',
@@ -50,18 +54,17 @@ const Home = (props) => {
     const { classes } = props;
 
     return (
-        <div className={classes.body}>
         <div className={classes.root}>
             <Head title="Travel Quiz" />
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
-                <img className={classes.logo} src="/static/assets/Logo_EaiViajanteT.png" />
+                <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
                 <h1 className={classes.title}>Travel Quiz</h1>
                 <Link href='/quiz'>
                 <Button variant="extendedFab" className={classes.button}>
                     Clique aqui para começar
       </Button>
       </Link>
-                <h3 style={{ marginTop: '10vw', marginBottom: '2vw', display: 'flex', justifyContent: 'space-around' }}>
+                <h3 className={classes.text}>
                     Nos siga nas redes sociais:
                 </h3>
 
@@ -69,27 +72,26 @@ const Home = (props) => {
                     <Grid item xs={2}>
                         <Link href="https://www.facebook.com/eaiviajante/">
                             <a target="_blank">
-                                <img className={classes.link} src="/static/assets/facebook-logo.svg" />
+                                <img className={classes.link} src="/static/facebook-logo.svg" />
                             </a>
                         </Link>
                         </Grid>
                         <Grid item xs={2}>
                         <Link href="https://eaiviajante.wordpress.com/">
                             <a target="_blank">
-                                <img style={{resize: 'both', maxHeight: '4vw',}} src="/static/assets/home.svg" />
+                                <img style={{resize: 'both', maxHeight: '4vw',}} src="/static/home.svg" />
                             </a>
                         </Link>
                         </Grid>
                         <Grid item xs={2}>
                         <Link href="https://www.instagram.com/eaiviajante/">
                             <a target="_blank">
-                                <img style={{resize: 'both', maxHeight: '4vw',}} src="/static/assets/instagram.svg" />
+                                <img style={{resize: 'both', maxHeight: '4vw',}} src="/static/instagram.svg" />
                             </a>
                         </Link>
                         </Grid>
                 </Grid>
             </Grid>
-        </div>
         </div>
     )
 }

@@ -70,8 +70,7 @@ class Subscribe extends Component {
 
     render() {
         const { classes } = this.props;
-        window.scrollTo(0,0);
-
+        
         console.log(this.props.id)
         return (
             <div className={classes.root}>

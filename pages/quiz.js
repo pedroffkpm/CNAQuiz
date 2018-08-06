@@ -1,6 +1,6 @@
 import { withStyles } from '@material-ui/core/styles';
-import data from '../static/assets/data.json';
-import categories from '../static/assets/categories.json';
+import data from '../static/data.json';
+import categories from '../static/categories.json';
 import Question from '../components/question';
 import shuffle from '../components/help/shuffle';
 import PropTypes from 'prop-types';
@@ -63,7 +63,14 @@ class Quiz extends Component {
     return ans
 }
 
-    onChoice = (key) => {
+    scrollToNext = (index) => {
+        console.log("scroll")
+        const elm = document.getElementById(`${index + 1}`)
+        elm.scrollIntoView()
+    }
+
+
+    onClick = (key) => {
 
         let newState = Object.assign({}, this.state);
         const profiles = categories.map(a => a.id)
@@ -86,30 +93,41 @@ class Quiz extends Component {
         newState.profile = this.calcProfile(newState.score);
         newState.incomplete = !(newState.answered === newState.questions.length)
 
+        console.log("onClick and the button is ", this.state.incomplete);
         this.setState(newState);
 
-        console.log(this.state.incomplete);
+        
  
     }
 
     render() {
         const {classes} = this.props;
         return (
-            <div>
-            <Grid container direction={"column"} justify={"center"} alignItems={"center"}>
-            <img className={classes.logo} src="/static/assets/Logo_EaiViajanteT.png" />
-            {
-                this.state.questions.map(
-                    (question, index) =>
-                    <Question key={index} className={classes.question} id={question.id} question={question} onClick={(choice) => this.onChoice(choice)}/>
-                )
-            }
-            <br/>
-                
-            <Button className = {classes.button} variant="extendedFab" onClick={() => Router.push(`/subscribe?id=${this.state.profile}`, `/subscribe`)} disabled={this.state.incomplete}>  Avançar >  </Button>
-
+            <Grid container className={classes.root} direction="column">
+                <Grid item xs={12}>
+                <Grid container direction="column" justify="center" alignItems="center" spacing={40}>
+                    <Grid item>
+                    <img className={classes.logo} src="../static/Logo_EaiViajanteT.png"/>
+                    </Grid>
+                    {
+                        this.state.questions.map(
+                            (question, index) =>
+                            <Grid item key={index} id={`${index}`}>
+                                <Question question={question} onClick={(choice) => {this.onClick(choice)}} />
+                            </Grid>
+                        )
+                    }
+                    <Grid item>
+                    <Button variant="extendedFab"
+                        style={{marginTop: '3vw', paddingLeft: '3vw', paddingRight: '3vw'}}
+                        onClick={() => Router.push(`/subscribe?id=${this.state.profile}`, `/subscribe`)}
+                        disabled={this.state.incomplete}>
+                        avançar
+                    </Button>
+                    </Grid>
+                </Grid>
+                </Grid>
             </Grid>
-            </div>
         )
     }
 }

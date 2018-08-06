@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,13 +92,13 @@ module.exports = require("@material-ui/core/styles");
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/Button");
+module.exports = require("@material-ui/core/Grid");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/Grid");
+module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 /* 5 */,
@@ -108,37 +108,16 @@ module.exports = require("@material-ui/core/Grid");
 module.exports = require("next/link");
 
 /***/ }),
-/* 7 */,
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(9);
-
-
-/***/ }),
-/* 9 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-
-// EXTERNAL MODULE: external "react"
-var external__react_ = __webpack_require__(0);
-var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
-
-// EXTERNAL MODULE: external "next/link"
-var link_ = __webpack_require__(6);
-var link__default = /*#__PURE__*/__webpack_require__.n(link_);
-
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__(10);
-var head__default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// EXTERNAL MODULE: external "prop-types"
-var external__prop_types_ = __webpack_require__(1);
-var external__prop_types__default = /*#__PURE__*/__webpack_require__.n(external__prop_types_);
-
-// CONCATENATED MODULE: ./components/head.js
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 
 
 
@@ -146,65 +125,87 @@ var defaultDescription = '';
 var defaultOGURL = '';
 var defaultOGImage = '';
 
-var head_Head = function Head(props) {
-  return external__react__default.a.createElement(head__default.a, null, external__react__default.a.createElement("meta", {
+var Head = function Head(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_head___default.a, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     charSet: "UTF-8"
-  }), external__react__default.a.createElement("title", null, props.title || ''), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", null, props.title || ''), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "description",
     content: props.description || defaultDescription
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1"
-  }), external__react__default.a.createElement("link", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "icon",
     sizes: "192x192",
     href: "/static/touch-icon.png"
-  }), external__react__default.a.createElement("link", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "apple-touch-icon",
     href: "/static/touch-icon.png"
-  }), external__react__default.a.createElement("link", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "mask-icon",
     href: "/static/favicon-mask.svg",
     color: "#49B882"
-  }), external__react__default.a.createElement("link", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "icon",
     href: "/favicon.ico",
     type: "image/x-icon"
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:url",
     content: props.url || defaultOGURL
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:title",
     content: props.title || ''
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:description",
     content: props.description || defaultDescription
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:image",
     content: props.ogImage || defaultOGImage
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:image:width",
     content: "1200"
-  }), external__react__default.a.createElement("meta", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:image:height",
     content: "630"
   }));
 };
 
-/* harmony default export */ var head = (head_Head);
-// EXTERNAL MODULE: external "@material-ui/core/styles"
-var styles_ = __webpack_require__(2);
-var styles__default = /*#__PURE__*/__webpack_require__.n(styles_);
+/* harmony default export */ __webpack_exports__["a"] = (Head);
 
-// EXTERNAL MODULE: external "@material-ui/core/Button"
-var Button_ = __webpack_require__(3);
-var Button__default = /*#__PURE__*/__webpack_require__.n(Button_);
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
 
-// EXTERNAL MODULE: external "@material-ui/core/Grid"
-var Grid_ = __webpack_require__(4);
-var Grid__default = /*#__PURE__*/__webpack_require__.n(Grid_);
+module.exports = require("next/head");
 
-// CONCATENATED MODULE: ./pages/index.js
+/***/ }),
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(12);
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__);
 
 
 
@@ -215,12 +216,16 @@ var Grid__default = /*#__PURE__*/__webpack_require__.n(Grid_);
 
 var styles = function styles(theme) {
   return {
-    body: {
-      margin: '0',
-      fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif'
+    text: {
+      fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
+      marginTop: '10vw',
+      marginBottom: '2vw',
+      display: 'flex',
+      justifyContent: 'space-around'
     },
     root: {
-      flexGrow: 1
+      flexGrow: 1,
+      margin: 0
     },
     button: {
       paddingLeft: '40px',
@@ -255,90 +260,77 @@ var styles = function styles(theme) {
   };
 };
 
-var pages_Home = function Home(props) {
+var Home = function Home(props) {
   var classes = props.classes;
-  return external__react__default.a.createElement("div", {
-    className: classes.body
-  }, external__react__default.a.createElement("div", {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: classes.root
-  }, external__react__default.a.createElement(head, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_head__["a" /* default */], {
     title: "Travel Quiz"
-  }), external__react__default.a.createElement(Grid__default.a, {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     container: true,
     spacing: 40,
     direction: "column",
     justify: "center",
     alignItems: "center"
-  }, external__react__default.a.createElement("img", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: classes.logo,
-    src: "/static/assets/Logo_EaiViajanteT.png"
-  }), external__react__default.a.createElement("h1", {
+    src: "/static/Logo_EaiViajanteT.png"
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: classes.title
-  }, "Travel Quiz"), external__react__default.a.createElement(link__default.a, {
+  }, "Travel Quiz"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/quiz"
-  }, external__react__default.a.createElement(Button__default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default.a, {
     variant: "extendedFab",
     className: classes.button
-  }, "Clique aqui para come\xE7ar")), external__react__default.a.createElement("h3", {
-    style: {
-      marginTop: '10vw',
-      marginBottom: '2vw',
-      display: 'flex',
-      justifyContent: 'space-around'
-    }
-  }, "Nos siga nas redes sociais:"), external__react__default.a.createElement(Grid__default.a, {
+  }, "Clique aqui para come\xE7ar")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
+    className: classes.text
+  }, "Nos siga nas redes sociais:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     container: true,
     className: classes.list,
     spacing: 16,
     direction: "row",
     justify: "center",
     alignItems: "center"
-  }, external__react__default.a.createElement(Grid__default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     item: true,
     xs: 2
-  }, external__react__default.a.createElement(link__default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "https://www.facebook.com/eaiviajante/"
-  }, external__react__default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     target: "_blank"
-  }, external__react__default.a.createElement("img", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: classes.link,
-    src: "/static/assets/facebook-logo.svg"
-  })))), external__react__default.a.createElement(Grid__default.a, {
+    src: "/static/facebook-logo.svg"
+  })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     item: true,
     xs: 2
-  }, external__react__default.a.createElement(link__default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "https://eaiviajante.wordpress.com/"
-  }, external__react__default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     target: "_blank"
-  }, external__react__default.a.createElement("img", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     style: {
       resize: 'both',
       maxHeight: '4vw'
     },
-    src: "/static/assets/home.svg"
-  })))), external__react__default.a.createElement(Grid__default.a, {
+    src: "/static/home.svg"
+  })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     item: true,
     xs: 2
-  }, external__react__default.a.createElement(link__default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "https://www.instagram.com/eaiviajante/"
-  }, external__react__default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     target: "_blank"
-  }, external__react__default.a.createElement("img", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     style: {
       resize: 'both',
       maxHeight: '4vw'
     },
-    src: "/static/assets/instagram.svg"
-  }))))))));
+    src: "/static/instagram.svg"
+  })))))));
 };
 
-/* harmony default export */ var pages = __webpack_exports__["default"] = (Object(styles_["withStyles"])(styles)(pages_Home));
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__["withStyles"])(styles)(Home));
 
 /***/ })
 /******/ ]);

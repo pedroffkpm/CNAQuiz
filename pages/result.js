@@ -1,5 +1,6 @@
 import { withStyles } from '@material-ui/core/styles';
-import categories from '../static/assets/categories.json';
+import Head from '../components/head';
+import categories from '../static/categories.json';
 import PropTypes from 'prop-types';
 import FacebookProvider, { Share } from 'react-facebook-sdk';
 import Grid from '@material-ui/core/Grid';
@@ -37,7 +38,8 @@ const Result = (props) => {
     const { title, img, text } = profile;
     window.scrollTo(0,0);
     return (
-        <div>
+        <div className={classes.root}>
+            <Head title={title} description={text} ogImage={`/static/images/${img}`}/>
             <h2 className={classes.title}> {title} </h2>
             <FacebookProvider appId='2050302261854131' xfbml>
                 <Share redirectURI="https://travelquiz.herokuapp.com">

@@ -1,15 +1,15 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import shuffle from './help/shuffle';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
+import CustomButton from '../components/customButton';
 import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
+        paddingBottom: '2vw',
     },
     button: {
         paddingLeft: '40px',
@@ -19,12 +19,6 @@ const styles = theme => ({
             color: theme.palette.secondary
         }
     },
-    card: {
-        maxWidth: '400',
-        padding: '30px',
-        border: '2px solid black',
-        borderRadius: '20px',
-    },
     image: {
         marginTop: '4vw',
         marginBottom: '1vw',
@@ -33,8 +27,8 @@ const styles = theme => ({
         justifyContent: 'center',
     },
     paper: {
-        height: 700,
-        width: 900,
+        height: '100% important',
+        width: '80vw',
         padding: theme.spacing.unit * 2,
         textAlign: 'center',
     },
@@ -45,7 +39,7 @@ const styles = theme => ({
         width: '100%',
         lineHeight: '1.15',
         textAlign: 'center',
-        fontSize: '2vw',
+        fontSize: '5vw',
     },
 });
 
@@ -57,37 +51,42 @@ class Question extends Component {
     }
 
     render() {
-        const { classes, question, onClick, id } = this.props;
+        const { classes, question, onClick } = this.props;
+        console.log(this.props);
+        const { id } = question;
+         var elevation = 0;
+        if (isWidthUp('lg', this.props.width)) {
+            elevation=1;
+          }
+
+        console.log(elevation);
         return (
-            <Grid container className={classes.root} direction="column">
-                <Grid item xs={12}>
-                    <Grid container direction="column" justify="center" alignItems="center" spacing={40}>
-                        <Grid item>
-                            <Paper className={classes.paper}>
-                                <Grid container direction="column" justify="center" alignItems="center">
-                                    <Grid item xs={12}>
-                                        {question.title}
-                                    </Grid>
-                                    <Grid container spacing={8} direction={"row"} justify={"center"} alignItems={"center"}>
-                                        {
-                                            question.options.map(
-                                                (option, index) =>
-                                                    <Grid key={index} item xs={6}>
-                                                        <Button variant="extendedFab" onClick={() => onClick({ "id": id, "value": option.value })}>
+            <Paper className={classes.paper} elevation={elevation}>
+                <Grid container className={classes.root} spacing={32} alignItems="center" direction="column" justify="center">
+                    <Grid item>
+                        <h3 className={classes.title}> {question.title} </h3>
+                    </Grid>
+                    <Grid container spacing={16} justify="center">
+                        {
+                            question.options.map(
+                                (option, index) =>
+                                    <Grid item xs={12} lg={5}>
+                                        <Grid container justify="center">
+                                            <Grid item key={index}>
+                                                {/* <CustomButton image={`/static/images/${option.image}`} onClick={() => onClick({ "id": id, "value": option.value })}>
                                                             {option.title}
-                                                        </Button>
-                                                    </Grid>
-                                            )
-
-                                        }
+                                                        </CustomButton> */}
+                                                <CustomButton image={`/static/images/${option.image}`} onClick={() => onClick({ "id": id, "value": option.value })}>
+                                                        {option.title}
+                                                </CustomButton>
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-
-                            </Paper>
-                        </Grid>
+                            )
+                        }
                     </Grid>
                 </Grid>
-            </Grid>
+            </Paper>
         )
     }
 };
@@ -98,4 +97,5 @@ Question.propTypes = {
     onClick: PropTypes.func
 }
 
-export default withStyles(styles)(Question)
+// export default withStyles(styles)(Question)
+export default withStyles(styles)(withWidth()(Question))
