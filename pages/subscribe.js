@@ -101,7 +101,7 @@ class Subscribe extends Component {
                         </Grid>
                         <Grid container direction={'row'} justify={"center"} alignItems={"center"}>
                             <Grid item xs={2}>
-                                <Link href={{pathname:'/result', query:{id: this.props.id}}}>
+                                <Link as={`/result/${this.props.id}`} href={`/result?id=${this.props.id}`}>
                                     <Button variant="extendedFab" type="submit" style={{ marginTop: '2vw' }} disabled={this.state.error}>
                                         Inscrever </Button>
                                 </Link>

@@ -36,7 +36,6 @@ const Result = (props) => {
     const { classes, id } = props;
     const profile = findProfile(id);
     const { title, img, text } = profile;
-    window.scrollTo(0,0);
     return (
         <div className={classes.root}>
             <Head title={title} description={text} ogImage={`/static/images/${img}`}/>
@@ -55,6 +54,7 @@ Result.propTypes = {
 };
 
 Result.getInitialProps = async (context) => {
+    console.log(context)
     const { id } = context.query
     return { id }
 }
