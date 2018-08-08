@@ -7,6 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
+import {FbIcon} from '../components/icons';
+
 
 const styles = theme => ({
     root: {
@@ -20,6 +22,10 @@ const styles = theme => ({
         textAlign: 'center',
         fontSize: '48px',
     },
+    icon: {
+        fontSize: 20,
+    },
+
     image: {
         resize: 'both',
         maxHeight: 500,
@@ -66,7 +72,10 @@ const Result = (props) => {
                                 <Grid item>
                                     <FacebookProvider appId='2050302261854131' xfbml>
                                         <Share redirectURI="https://travelquiz.herokuapp.com">
-                                            <Button variant="contained"> Share </Button>
+                                            <Button variant="contained"> 
+                                                <FbIcon className={classes.icon} />
+                                                Share
+                                            </Button>
                                         </Share>
                                     </FacebookProvider>
                                 </Grid>

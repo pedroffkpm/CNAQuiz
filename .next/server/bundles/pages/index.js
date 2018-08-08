@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -186,15 +186,51 @@ var Head = function Head(props) {
 module.exports = require("next/head");
 
 /***/ }),
-/* 10 */,
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FbIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HomeIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return InstaIcon; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon__);
+
+
+var FbIcon = function FbIcon(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default.a, props, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", {
+    d: "m5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2-2v-14a2 2 0 0 1 2-2m13 2h-2.5a3.5 3.5 0 0 0 -3.5 3.5v2.5h-2v3h2v7h3v-7h3v-3h-3v-2a1 1 0 0 1 1-1h2z"
+  }));
+};
+var HomeIcon = function HomeIcon(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default.a, props, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", {
+    d: "M9,19V13H11L13,13H15V19H18V10.91L12,4.91L6,10.91V19H9M12,2.09L21.91,12H20V21H13V15H11V21H4V12H2.09L12,2.09Z"
+  }));
+};
+var InstaIcon = function InstaIcon(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default.a, props, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", {
+    d: "M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+  }));
+};
+
+/***/ }),
 /* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/SvgIcon");
+
+/***/ }),
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(14);
 
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -212,6 +248,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_icons__ = __webpack_require__(10);
+
 
 
 
@@ -224,8 +262,6 @@ var styles = function styles(theme) {
   return {
     text: {
       fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
-      marginTop: '10vw',
-      marginBottom: '2vw',
       display: 'flex',
       justifyContent: 'space-around'
     },
@@ -239,19 +275,22 @@ var styles = function styles(theme) {
       margin: theme.spacing.unit
     },
     logo: {
-      marginTop: '4vw',
+      // marginTop: '4vw',
       width: '70vw',
       display: 'flex',
       justifyContent: 'center'
     },
     list: {
-      margin: '30',
       padding: '30px'
     },
     link: {
       marginLeft: '33.3%',
       resize: 'both',
       maxHeight: '4vw'
+    },
+    icon: {
+      fontSize: 48,
+      color: 'black'
     },
     title: {
       fontFamily: 'Futura-Bold,-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
@@ -278,62 +317,65 @@ var Home = function Home(props) {
     direction: "column",
     justify: "center",
     alignItems: "center"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: classes.logo,
     src: "/static/Logo_EaiViajanteT.png"
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: classes.title
-  }, "Travel Quiz"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+  }, "Travel Quiz")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/quiz"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default.a, {
     variant: "extendedFab",
     className: classes.button
-  }, "Clique aqui para come\xE7ar")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
+  }, "Clique aqui para come\xE7ar"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
     className: classes.text
-  }, "Nos siga nas redes sociais:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, "Nos siga nas redes sociais:")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     container: true,
     className: classes.list,
-    spacing: 16,
+    spacing: 40,
     direction: "row",
     justify: "center",
     alignItems: "center"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
-    item: true,
-    xs: 2
+    item: true
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "https://www.facebook.com/eaiviajante/"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     target: "_blank"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    className: classes.link,
-    src: "/static/facebook-logo.svg"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_icons__["a" /* FbIcon */], {
+    className: classes.icon
   })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
-    item: true,
-    xs: 2
+    item: true
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "https://eaiviajante.wordpress.com/"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     target: "_blank"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    style: {
-      resize: 'both',
-      maxHeight: '4vw'
-    },
-    src: "/static/home.svg"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_icons__["b" /* HomeIcon */], {
+    className: classes.icon
   })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
-    item: true,
-    xs: 2
+    item: true
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "https://www.instagram.com/eaiviajante/"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     target: "_blank"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    style: {
-      resize: 'both',
-      maxHeight: '4vw'
-    },
-    src: "/static/instagram.svg"
-  })))))));
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_icons__["c" /* InstaIcon */], {
+    className: classes.icon
+  }))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__["withStyles"])(styles)(Home));

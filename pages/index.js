@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { FbIcon, HomeIcon, InstaIcon } from '../components/icons';
 
 const styles = theme => ({
     text: {
         fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
-        marginTop: '10vw',
-        marginBottom: '2vw',
         display: 'flex',
-        justifyContent: 'space-around' 
+        justifyContent: 'space-around'
     },
     root: {
         flexGrow: 1,
@@ -23,21 +22,23 @@ const styles = theme => ({
         margin: theme.spacing.unit,
     },
     logo: {
-        marginTop: '4vw',
+        // marginTop: '4vw',
         width: '70vw',
         display: 'flex',
         justifyContent: 'center',
     },
     list: {
-        margin: '30',
-        padding: '30px',
+        padding: '20px',
     },
     link: {
         marginLeft: '33.3%',
         resize: 'both',
         maxHeight: '4vw',
     },
-
+    icon: {
+        fontSize: 48,
+        color: 'black',
+    },
     title: {
         fontFamily: 'Futura-Bold,-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
         marginTop: '0',
@@ -57,39 +58,49 @@ const Home = (props) => {
         <div className={classes.root}>
             <Head title="Travel Quiz" />
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
-                <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
-                <h1 className={classes.title}>Travel Quiz</h1>
-                <Link href='/quiz'>
-                <Button variant="extendedFab" className={classes.button}>
-                    Clique aqui para começar
+                <Grid item xs={12}>
+                    <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
+                </Grid>
+                <Grid item xs={12}>
+                    <h1 className={classes.title}>Travel Quiz</h1>
+                </Grid>
+                <Grid item xs={12}>
+                    <Link href='/quiz'>
+                        <Button variant="extendedFab" className={classes.button}>
+                            Clique aqui para começar
       </Button>
-      </Link>
-                <h3 className={classes.text}>
-                    Nos siga nas redes sociais:
+                    </Link>
+                </Grid>
+                <Grid item xs={12}>
+                    <h3 className={classes.text}>
+                        Nos siga nas redes sociais:
                 </h3>
+                </Grid>
 
-                <Grid container className={classes.list} spacing={16} direction={"row"} justify={"center"} alignItems={"center"}>
-                    <Grid item xs={2}>
-                        <Link href="https://www.facebook.com/eaiviajante/">
-                            <a target="_blank">
-                                <img className={classes.link} src="/static/facebook-logo.svg" />
-                            </a>
-                        </Link>
+                <Grid item xs={12}>
+                    <Grid container className={classes.list} spacing={40} direction={"row"} justify={"center"} alignItems={"center"}>
+                        <Grid item>
+                            <Link href="https://www.facebook.com/eaiviajante/">
+                                <a target="_blank">
+                                    <FbIcon className={classes.icon} />
+                                </a>
+                            </Link>
                         </Grid>
-                        <Grid item xs={2}>
-                        <Link href="https://eaiviajante.wordpress.com/">
-                            <a target="_blank">
-                                <img style={{resize: 'both', maxHeight: '4vw',}} src="/static/home.svg" />
-                            </a>
-                        </Link>
+                        <Grid item>
+                            <Link href="https://eaiviajante.wordpress.com/">
+                                <a target="_blank">
+                                    <HomeIcon className={classes.icon} />
+                                </a>
+                            </Link>
                         </Grid>
-                        <Grid item xs={2}>
-                        <Link href="https://www.instagram.com/eaiviajante/">
-                            <a target="_blank">
-                                <img style={{resize: 'both', maxHeight: '4vw',}} src="/static/instagram.svg" />
-                            </a>
-                        </Link>
+                        <Grid item>
+                            <Link href="https://www.instagram.com/eaiviajante/">
+                                <a target="_blank">
+                                    <InstaIcon className={classes.icon} />
+                                </a>
+                            </Link>
                         </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
         </div>
