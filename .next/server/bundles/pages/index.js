@@ -102,19 +102,20 @@ module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
@@ -150,11 +151,17 @@ var Head = function Head(props) {
     href: "/favicon.ico",
     type: "image/x-icon"
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "fb:app_id",
+    content: props.appID || defaultOGURL
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:url",
     content: props.url || defaultOGURL
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:type",
+    content: props.type || "article"
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:title",
-    content: props.title || ''
+    content: props.ogTitle || ''
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:description",
     content: props.description || defaultDescription
@@ -173,13 +180,12 @@ var Head = function Head(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Head);
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
 
 /***/ }),
-/* 9 */,
 /* 10 */,
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -195,9 +201,9 @@ module.exports = __webpack_require__(12);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__ = __webpack_require__(2);

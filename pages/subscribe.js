@@ -121,7 +121,7 @@ Subscribe.propTypes = {
 
 Subscribe.getInitialProps = async (context) => {
     const { id } = context.query
-
+    console.log('subscribe: ', id);
     return { id }
 }
 

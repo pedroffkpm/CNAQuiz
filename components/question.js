@@ -62,26 +62,25 @@ class Question extends Component {
         console.log(elevation);
         return (
             <Paper className={classes.paper} elevation={elevation}>
-                <Grid container className={classes.root} spacing={32} alignItems="center" direction="column" justify="center">
+                <Grid container className={classes.root} spacing={16} alignItems="center" direction="column" justify="center">
                     <Grid item>
                         <h3 className={classes.title}> {question.title} </h3>
                     </Grid>
-                    <Grid container spacing={16} justify="center">
+                    <Grid container spacing={8} justify="center">
                         {
                             question.options.map(
-                                (option, index) =>
+                                (option, index) => {
+                                    return(
                                     <Grid item xs={12} lg={5}>
                                         <Grid container justify="center">
                                             <Grid item key={index}>
-                                                {/* <CustomButton image={`/static/images/${option.image}`} onClick={() => onClick({ "id": id, "value": option.value })}>
-                                                            {option.title}
-                                                        </CustomButton> */}
                                                 <CustomButton image={`/static/images/${option.image}`} onClick={() => onClick({ "id": id, "value": option.value })}>
                                                         {option.title}
                                                 </CustomButton>
                                             </Grid>
                                         </Grid>
                                     </Grid>
+                                    )}
                             )
                         }
                     </Grid>

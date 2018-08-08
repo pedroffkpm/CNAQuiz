@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
@@ -9,28 +9,49 @@ const styles = theme => ({
   root: {
     display: 'flex',
     flexGrow: 1,
-      width: 900, // Overrides inline-style
-      height: 900,
-      [theme.breakpoints.up('lg')]: {
-        width: 350,
-        height: 350,
-        // Overrides inline-style
+    width: '70vw', // Overrides inline-style
+    height: '70vw',
+    [theme.breakpoints.up('lg')]: {
+      width: 400,
+      height: 400,
+      // Overrides inline-style
     },
   },
+  imageSrc: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  },
   paper: {
-      position: 'absolute',
-      left: 0,
-      right: 0,
-      top: 0,
-      bottom: 0,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center 40%',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
     textAlign: 'center',
   },
 
+  text: {
+    textAlign: 'center',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+
   image: {
-    position: 'relative',
-    height: 300,
+    position: 'absolute',
+    left: '2vw',
+    right: '2vw',
+    marginTop: '2vh',
+    height: 325,
+    [theme.breakpoints.down('md')]: {
+      marginTop: '3vh',
+    }
   },
 });
 
@@ -44,18 +65,20 @@ class CustomButton extends Component {
 
   render() {
     const { classes, image, children, onClick } = this.props;
-  return (
-    <div className={classes.root}>
+    return (
+      <div className={classes.root}>
         <ButtonBase
           focusRipple
           key={0}
           focusVisibleClassName={classes.focusVisible}
-          style={{width: "100%", height: "100%"}}
+          style={{ width: "100%", height: "100%" }}
           onClick={onClick}
-         >
+        >
           <Paper className={classes.paper}>
-          <img className={classes.image} src={image}/>
-          <h3> {children} </h3>
+          <div className={classes.image}>
+            <span className={classes.imageSrc} style={{ backgroundImage: `url(${image}` }} />
+            </div>
+            <h3 className={classes.text}> {children} </h3>
           </Paper>
 
           {/* <span
@@ -75,9 +98,9 @@ class CustomButton extends Component {
             </Typography>
           */}
         </ButtonBase>
-    </div>
-  );
-}
+      </div>
+    );
+  }
 }
 
 CustomButton.propTypes = {

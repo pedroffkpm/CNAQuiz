@@ -4,47 +4,79 @@ import categories from '../static/categories.json';
 import PropTypes from 'prop-types';
 import FacebookProvider, { Share } from 'react-facebook-sdk';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button'
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
+        fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
     },
     title: {
-        fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
-        marginTop: '5vw',
-        marginBottom: '2vw',
         width: '100%',
         paddingTop: '0',
         lineHeight: '1.15',
         textAlign: 'center',
         fontSize: '48px',
     },
+    image: {
+        resize: 'both',
+        maxHeight: 500,
+    },
+    paper: {
+        height: '100% important',
+        width: '80vw',
+        padding: theme.spacing.unit * 2,
+        textAlign: 'center',
+    },
 });
 
 const findProfile = (id) => {
-    for(var index in categories) {
-        if(categories[index].id === id) {
+    for (var index in categories) {
+        if (categories[index].id === id) {
             return categories[index]
         }
     }
-
 }
 
 const Result = (props) => {
     const { classes, id } = props;
     const profile = findProfile(id);
+    console.log('profile: ', profile);
     const { title, img, text } = profile;
     return (
-        <div className={classes.root}>
-            <Head title={title} description={text} ogImage={`/static/images/${img}`}/>
-            <h2 className={classes.title}> {title} </h2>
-            <FacebookProvider appId='2050302261854131' xfbml>
-                <Share redirectURI="https://travelquiz.herokuapp.com">
-                    <Button> Share </Button>
-                </Share>
-            </FacebookProvider>
+        <div>
+            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
+            <Grid container className={classes.root}>
+                <Grid item xs={12}>
+                    <Grid container alignItems="center" justify="center">
+                        <Grid item>
+                            <Paper className={classes.paper} elevation={4}>
+                            <Grid container spacing={24} alignItems="center" direction="column" justify="center">
+                                <Grid item>
+                                    <h2 className={classes.title}> {title} </h2>
+                                </Grid>
+                                <Grid item>
+                                        <img className={classes.image} src={`/static/images/${img}`} style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}/>
+                                </Grid>
+                                <Grid item>
+                                    <h3 style={{maxWidth: 500, margin: 'auto'}}> {text} </h3>
+                                </Grid>
+                                <Grid item>
+                                    <FacebookProvider appId='2050302261854131' xfbml>
+                                        <Share redirectURI="https://travelquiz.herokuapp.com">
+                                            <Button variant="contained"> Share </Button>
+                                        </Share>
+                                    </FacebookProvider>
+                                </Grid>
+                                </Grid>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+
         </div>
     )
 }
