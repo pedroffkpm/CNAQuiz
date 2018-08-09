@@ -27,6 +27,9 @@ const styles = theme => ({
         justifyContent: 'center',
     },
     paper: {
+        [theme.breakpoints.up('lg')]: {
+        marginTop:'2vw',
+        },
         height: '100% important',
         width: '80vw',
         padding: theme.spacing.unit * 2,
