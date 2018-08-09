@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -223,14 +223,15 @@ module.exports = require("@material-ui/core/SvgIcon");
 
 /***/ }),
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(14);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -261,6 +262,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var styles = function styles(theme) {
   return {
     text: {
+      marginTop: 100,
       fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
       display: 'flex',
       justifyContent: 'space-around'
@@ -270,18 +272,20 @@ var styles = function styles(theme) {
       margin: 0
     },
     button: {
+      marginTop: 0,
       paddingLeft: '40px',
       paddingRight: '40px',
       margin: theme.spacing.unit
     },
     logo: {
-      // marginTop: '4vw',
+      marginTop: '4vw',
       width: '70vw',
       display: 'flex',
       justifyContent: 'center'
     },
     list: {
-      padding: '30px'
+      marginTop: '0 important',
+      padding: '20px'
     },
     link: {
       marginLeft: '33.3%',
@@ -294,7 +298,7 @@ var styles = function styles(theme) {
     },
     title: {
       fontFamily: 'Futura-Bold,-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
-      marginTop: '0',
+      marginTop: 0,
       marginBottom: '2vw',
       width: '100%',
       paddingTop: '0',
@@ -317,18 +321,12 @@ var Home = function Home(props) {
     direction: "column",
     justify: "center",
     alignItems: "center"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
-    item: true,
-    xs: 12
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: classes.logo,
     src: "/static/Logo_EaiViajanteT.png"
-  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
-    item: true,
-    xs: 12
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: classes.title
-  }, "Travel Quiz")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, "Travel Quiz"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     item: true,
     xs: 12
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
@@ -336,12 +334,9 @@ var Home = function Home(props) {
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default.a, {
     variant: "extendedFab",
     className: classes.button
-  }, "Clique aqui para come\xE7ar"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
-    item: true,
-    xs: 12
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
+  }, "Clique aqui para come\xE7ar"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
     className: classes.text
-  }, "Nos siga nas redes sociais:")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, "Nos siga nas redes sociais:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
     item: true,
     xs: 12
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {

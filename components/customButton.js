@@ -17,6 +17,10 @@ const styles = theme => ({
       // Overrides inline-style
     },
   },
+  disabled: {
+    color: "grey",
+    opacity: 0.7,
+  },
   imageSrc: {
     position: 'absolute',
     left: 0,
@@ -41,6 +45,11 @@ const styles = theme => ({
     left: 0,
     right: 0,
     bottom: 0,
+
+    [theme.breakpoints.down('md')]: {
+      fontSize: 20,
+    }
+
   },
 
   image: {
@@ -48,9 +57,15 @@ const styles = theme => ({
     left: '2vw',
     right: '2vw',
     marginTop: '2vh',
-    height: 325,
+    [theme.breakpoints.up('lg')]: {
+      height: 350,
+    width: 350,
+    },
     [theme.breakpoints.down('md')]: {
-      marginTop: '3vh',
+      top: 0,
+      left: '3vh',
+      right: '3vh',
+      bottom: '6vh',
     }
   },
 });
@@ -68,11 +83,11 @@ class CustomButton extends Component {
     return (
       <div className={classes.root}>
         <ButtonBase
-          focusRipple
-          key={0}
-          focusVisibleClassName={classes.focusVisible}
+          disableRipple
+          classes={{disabled: classes.disabled}}
           style={{ width: "100%", height: "100%" }}
           onClick={onClick}
+          {... this.props}
         >
           <Paper className={classes.paper}>
           <div className={classes.image}>

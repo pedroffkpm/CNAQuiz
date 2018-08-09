@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Router from 'next/router' 
 import { Component } from 'react';
+import CommentsCount from '../node_modules/react-facebook-sdk/dist/CommentsCount';
 
 const styles = theme => ({
     root: {
@@ -44,8 +45,20 @@ class Quiz extends Component {
             question => shuffle(question.options)
         )
 
-        this.state = { incomplete: true, answered: 0, log:[], questions: shuffle(questions).splice(0, numberOfRounds), score:{}, profile: "" };
+        this.state = { incomplete: true,
+                       answered: 0, 
+                       log:[],
+                       topElement: "",
+                       questions: shuffle(questions).splice(0, numberOfRounds), 
+                       score:{}, 
+                       profile: "" };
 
+    }
+    componentDidUpdate(prevProps, prevState) {
+        console.log('update')
+        if(prevState.topElement != this.state.topElement) {
+        this.scrollTo(this.state.topElement)
+        }
     }
 
     calcProfile= (obj) => {
@@ -53,7 +66,6 @@ class Quiz extends Component {
         var ans = '';
 
         for (var key in obj) {
-            console.log(key);
             if(obj[key] > max){
                 max = obj[key];
                 ans = key;
@@ -63,15 +75,14 @@ class Quiz extends Component {
     return ans
 }
 
-    scrollToNext = (index) => {
-        console.log("scroll")
-        const elm = document.getElementById(`${index + 1}`)
-        elm.scrollIntoView()
+    scrollTo = (elmID) => {
+        console.log('scroll to ', elmID)
+        const elm = document.getElementById(elmID)
+        elm.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
 
-
-    onClick = (key) => {
-
+    onClick = (key, questionIndex) => {
+        console.log('onclick')
         let newState = Object.assign({}, this.state);
         const profiles = categories.map(a => a.id)
         const {id, value} = key;
@@ -90,17 +101,14 @@ class Quiz extends Component {
             newState.score[category] += valueIterator[category]
         }
     }
+        newState.topElement = `q${questionIndex+1}`;
         newState.profile = this.calcProfile(newState.score);
         newState.incomplete = !(newState.answered === newState.questions.length)
-
-        console.log("onClick and the button is ", this.state.incomplete);
         this.setState(newState);
-
-        
- 
     }
 
     render() {
+        console.log('render')
         const {classes} = this.props;
         return (
             <Grid container className={classes.root} direction="column">
@@ -111,14 +119,16 @@ class Quiz extends Component {
                     </Grid>
                     {
                         this.state.questions.map(
-                            (question, index) =>
-                            <Grid item key={index} id={`${index}`}>
-                                <Question question={question} onClick={(choice) => {this.onClick(choice)}} />
+                            (question, questionIndex) =>
+                            <div id={`q${questionIndex}`} key={questionIndex}>
+                            <Grid item>
+                                <Question question={question} onClick={(key) => this.onClick(key, questionIndex)}/>
                             </Grid>
+                            </div>
                         )
                     }
                     <Grid item>
-                    <Button variant="extendedFab"
+                    <Button variant="extendedFab" id={`q${data.numberOfRounds}`}
                         style={{marginTop: '3vw', paddingLeft: '3vw', paddingRight: '3vw'}}
                         onClick={() => Router.push(`/subscribe?id=${this.state.profile}`, `/subscribe`)}
                         disabled={this.state.incomplete}>

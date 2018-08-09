@@ -48,18 +48,33 @@ class Question extends Component {
     constructor(props) {
         super(props);
 
+        this.state= {disable: [false, false, false, false]};
+
+    }
+
+    handleButton = (index, choice) => {
+
+        for(var i=0; i < this.state.disable.length; i++) {
+            if(i === index) {
+                this.state.disable[i] = true
+            }
+            else {
+            this.state.disable[i] = false
+            }
+        }
+
+        const { onClick } = this.props;
+        onClick(choice);
     }
 
     render() {
-        const { classes, question, onClick } = this.props;
-        console.log(this.props);
+        const { classes, question } = this.props;
         const { id } = question;
          var elevation = 0;
         if (isWidthUp('lg', this.props.width)) {
             elevation=1;
           }
 
-        console.log(elevation);
         return (
             <Paper className={classes.paper} elevation={elevation}>
                 <Grid container className={classes.root} spacing={16} alignItems="center" direction="column" justify="center">
@@ -69,12 +84,15 @@ class Question extends Component {
                     <Grid container spacing={8} justify="center">
                         {
                             question.options.map(
-                                (option, index) => {
+                                (option, optionIndex) => {
                                     return(
                                     <Grid item xs={12} lg={5}>
                                         <Grid container justify="center">
-                                            <Grid item key={index}>
-                                                <CustomButton image={`/static/images/${option.image}`} onClick={() => onClick({ "id": id, "value": option.value })}>
+                                            <Grid item key={optionIndex}>
+                                                <CustomButton id={`o${optionIndex}`}
+                                                              image={`/static/images/${option.image}`}
+                                                              onClick={() => this.handleButton(optionIndex, { "id": id, "value": option.value })}
+                                                              disabled={this.state.disable[optionIndex]}>
                                                         {option.title}
                                                 </CustomButton>
                                             </Grid>

@@ -8,6 +8,7 @@ import { FbIcon, HomeIcon, InstaIcon } from '../components/icons';
 
 const styles = theme => ({
     text: {
+        marginTop: 100,
         fontFamily: '-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
         display: 'flex',
         justifyContent: 'space-around'
@@ -17,17 +18,19 @@ const styles = theme => ({
         margin: 0,
     },
     button: {
+        marginTop: 0,
         paddingLeft: '40px',
         paddingRight: '40px',
         margin: theme.spacing.unit,
     },
     logo: {
-        // marginTop: '4vw',
+        marginTop: '4vw',
         width: '70vw',
         display: 'flex',
         justifyContent: 'center',
     },
     list: {
+        marginTop: '0 important',
         padding: '20px',
     },
     link: {
@@ -41,7 +44,7 @@ const styles = theme => ({
     },
     title: {
         fontFamily: 'Futura-Bold,-apple-system,Arial,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
-        marginTop: '0',
+        marginTop: 0,
         marginBottom: '2vw',
         width: '100%',
         paddingTop: '0',
@@ -58,25 +61,18 @@ const Home = (props) => {
         <div className={classes.root}>
             <Head title="Travel Quiz" />
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
-                <Grid item xs={12}>
                     <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
-                </Grid>
-                <Grid item xs={12}>
                     <h1 className={classes.title}>Travel Quiz</h1>
-                </Grid>
                 <Grid item xs={12}>
                     <Link href='/quiz'>
                         <Button variant="extendedFab" className={classes.button}>
                             Clique aqui para começar
-      </Button>
+                        </Button>
                     </Link>
                 </Grid>
-                <Grid item xs={12}>
                     <h3 className={classes.text}>
                         Nos siga nas redes sociais:
-                </h3>
-                </Grid>
-
+                    </h3>
                 <Grid item xs={12}>
                     <Grid container className={classes.list} spacing={40} direction={"row"} justify={"center"} alignItems={"center"}>
                         <Grid item>
