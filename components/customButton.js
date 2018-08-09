@@ -12,8 +12,8 @@ const styles = theme => ({
     width: '70vw', // Overrides inline-style
     height: '70vw',
     [theme.breakpoints.up('lg')]: {
-      width: 400,
-      height: 400,
+      width: 300,
+      height: 300,
       // Overrides inline-style
     },
   },
@@ -45,9 +45,9 @@ const styles = theme => ({
     left: 0,
     right: 0,
     bottom: 0,
-
     [theme.breakpoints.down('md')]: {
-      fontSize: 20,
+      fontSize: 17,
+      marginBottom: 0,
     }
 
   },
@@ -58,8 +58,8 @@ const styles = theme => ({
     right: '2vw',
     marginTop: '2vh',
     [theme.breakpoints.up('lg')]: {
-      height: 350,
-    width: 350,
+      height: 250,
+    width: 250,
     },
     [theme.breakpoints.down('md')]: {
       top: 0,

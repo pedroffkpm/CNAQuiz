@@ -1,4 +1,4 @@
-import jquery from 'jquery'
+import jquery from 'jquery';
 
 export default async function subscribeToNewsletter(email) {
     const data = {
@@ -15,9 +15,9 @@ export default async function subscribeToNewsletter(email) {
                 success: (data) => {
                     if (data['result'] != "success") {
                         //ERROR
-                        throw new Error(data['msg']);
+                        console.log("ERROR ", data['msg']);
                    } else {
-                        return data;
+                        console.log("SUCCESS ", data['msg']);
                    }
                 }
     });

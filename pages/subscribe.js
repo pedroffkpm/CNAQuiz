@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-
+import Router from 'next/router';
 import { Component } from 'react';
 import subscribeToNewsletter from '../components/help/mailchimpHelp'
 
@@ -49,9 +49,9 @@ class Subscribe extends Component {
     }
 
     onSubmit = async (e) => {
+        console.log('onsubmit')
         e.preventDefault();
         await subscribeToNewsletter(this.state.email);
-
     };
 
     onChange(event) {
@@ -64,7 +64,6 @@ class Subscribe extends Component {
         } else {
             newState.error = true;
         }
-
         this.setState(newState);
     };
 
@@ -101,10 +100,11 @@ class Subscribe extends Component {
                         </Grid>
                         <Grid container direction={'row'} justify={"center"} alignItems={"center"}>
                             <Grid item xs={2}>
-                                <Link as={`/result/${this.props.id}`} href={`/result?id=${this.props.id}`}>
-                                    <Button variant="extendedFab" type="submit" style={{ marginTop: '2vw' }} disabled={this.state.error}>
+                                    <Button variant='extendedFab' type="submit"
+                                            style={{ marginTop: '2vw' }}
+                                            onClick={() => {this.onSubmit; Router.push(`/result?id=${this.props.id}`, `/result/${this.props.id}`)}}
+                                            disabled={this.state.error}>
                                         Inscrever </Button>
-                                </Link>
                             </Grid>
                         </Grid>
                     </form>
