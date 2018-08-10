@@ -1,12 +1,11 @@
 import { withStyles } from '@material-ui/core/styles';
 import Head from '../components/head';
-import categories from '../static/categories.json';
 import PropTypes from 'prop-types';
+import findProfile from '../components/help/findProfile';
 import FacebookProvider, { Share } from 'react-facebook-sdk';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-
 import {FbIcon} from '../components/icons';
 
 
@@ -38,13 +37,6 @@ const styles = theme => ({
     },
 });
 
-const findProfile = (id) => {
-    for (var index in categories) {
-        if (categories[index].id === id) {
-            return categories[index]
-        }
-    }
-}
 
 const Result = (props) => {
     const { classes, id } = props;
@@ -53,7 +45,7 @@ const Result = (props) => {
     const { title, img, text } = profile;
     return (
         <div>
-            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' url='https://travelquiz.herokuapp.com' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
+            <Head url={`https://travelquiz.herokuapp.com/share?id=${id}`}/>
             <Grid container className={classes.root}>
                 <Grid item xs={12}>
                     <Grid container alignItems="center" justify="center">

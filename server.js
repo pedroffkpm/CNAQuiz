@@ -17,6 +17,11 @@ app.prepare()
       app.render(req, res, actualPage, queryParams)
     })
 
+    server.get('/share', (req, res) => {
+      const actualPage = '/'
+      app.render(req, res, actualPage, {})
+    })
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
