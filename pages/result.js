@@ -53,7 +53,7 @@ const Result = (props) => {
     const { title, img, text } = profile;
     return (
         <div>
-            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
+            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' url='https://travelquiz.herokuapp.com' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
             <Grid container className={classes.root}>
                 <Grid item xs={12}>
                     <Grid container alignItems="center" justify="center">
@@ -74,7 +74,7 @@ const Result = (props) => {
                                         <Share redirectURI="https://travelquiz.herokuapp.com">
                                             <Button variant="contained"> 
                                                 <FbIcon className={classes.icon} />
-                                                Share
+                                                Compartilhar
                                             </Button>
                                         </Share>
                                     </FacebookProvider>

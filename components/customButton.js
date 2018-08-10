@@ -10,10 +10,10 @@ const styles = theme => ({
     display: 'flex',
     flexGrow: 1,
     width: '70vw', // Overrides inline-style
-    height: '70vw',
+    height: '72vw',
     [theme.breakpoints.up('lg')]: {
       width: 300,
-      height: 300,
+      height: 330,
       // Overrides inline-style
     },
   },
@@ -65,7 +65,7 @@ const styles = theme => ({
       top: 0,
       left: '3vh',
       right: '3vh',
-      bottom: '6vh',
+      bottom: '8vh',
     }
   },
 });
@@ -95,23 +95,6 @@ class CustomButton extends Component {
             </div>
             <h3 className={classes.text}> {children} </h3>
           </Paper>
-
-          {/* <span
-            className={classes.imageSrc}
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
-          /> */}
-          {/* 
-            <Typography
-              component="span"
-              variant="subheading"
-              color="inherit"
-              className={classes.imageTitle}
-            >
-              {image.title}
-            </Typography>
-          */}
         </ButtonBase>
       </div>
     );
