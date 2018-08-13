@@ -101,14 +101,26 @@ module.exports = require("@material-ui/core/Grid");
 module.exports = require("@material-ui/core/Button");
 
 /***/ }),
-/* 5 */,
-/* 6 */
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = [{"id":"aventura","img":"perfilAventura.gif","title":"Você tirou o Tigrão","text":"Você e seu bonde adoram aventuras na mata, acampamentos e tudo o que envolva ficar perto da mãe natureza!"},{"id":"audacioso","img":"perfilAudacioso.jpg","title":"Você tirou a Moana","text":"Você é muito curioso e não pensa muito antes de viver novas experiencias. Assim, deixa a vida te levar a lugares novos e conhece tudo que a vida tem a te oferecer."},{"id":"turista","img":"perfilTurista.jpg","title":"Você tirou o Russel","text":"Você é o turista que quer garantir que viu tudo que tinha que ver. O tempo na viagem voa, escorre pelas mãos, e por isso você faz de tudo para viver o máximo."},{"id":"consciente","img":"perfilConsciente.jpg","title":"Você tirou o Sirigueijo","text":"Você é do tipo consciente. Às vezes meio pão-duro, mas é por que não quer levar um susto com as contas de sabe se lá quantos dol."},{"id":"convencional","img":"perfilConvencional.jpeg","title":"Você tirou o Marlin","text":"Você é o turista que toma muito cuidado na hora de experimentar comidas e passeios alternativos, vai que dê ruim? Mesmo assim, não deixa de criar várias memórias em suas viagens!"},{"id":"top","img":"perfilTop.jpeg","title":"Você tirou a Elsa","text":"Suas viagens são um sonho de princesa. Você livre está para gastar uns dol a mais para ter uma viagem com mais conforto!"},{"id":"relax","img":"perfilRelax.jpg","title":"Você tirou o Lula Molusco","text":"Você é o turista paz e amor ✌️. Férias são para descansar e você sabe fazer isso muito bem passando um dia pleno na praia."},{"id":"guloso","img":"perfilGuloso.png","title":"Você tirou a Magali","text":"você é o turista que só pensa em comer! Pra você, viagem é uma oportunidade de experimentar pratos novos e deliciosos. Você sabe aproveitar cada dia muito bem, não deixando pra amanhã o que você pode comer hoje!"}]
+
+/***/ }),
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = require("next/link");
+
+/***/ }),
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
@@ -173,27 +185,39 @@ var Head = function Head(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Head);
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
 
 /***/ }),
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ (function(module, exports) {
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = require("next/link");
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = findProfile;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_categories_json__);
+
+function findProfile(id) {
+  for (var index in __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a) {
+    if (__WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index].id === id) {
+      return __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index];
+    }
+  }
+
+  return {};
+}
 
 /***/ }),
+/* 11 */,
 /* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FbIcon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HomeIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return RestartIcon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return InstaIcon; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
@@ -209,6 +233,11 @@ var FbIcon = function FbIcon(props) {
 var HomeIcon = function HomeIcon(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default.a, props, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", {
     d: "M9,19V13H11L13,13H15V19H18V10.91L12,4.91L6,10.91V19H9M12,2.09L21.91,12H20V21H13V15H11V21H4V12H2.09L12,2.09Z"
+  }));
+};
+var RestartIcon = function RestartIcon(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default.a, props, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", {
+    d: "m11 4c2.05 0 4.09.77 5.65 2.33 3.13 3.13 3.12 8.17-.01 11.31-1.83 1.86-4.34 2.6-6.73 2.28l.53-1.96c1.71.16 3.49-.42 4.8-1.73 2.34-2.34 2.34-6.14 0-8.48-1.18-1.18-2.71-1.75-4.24-1.75v4.58l-4.96-4.95 4.96-4.95zm-5.66 13.65c-2.64-2.65-3.04-6.65-1.23-9.71l1.48 1.47c-1.09 2.23-.68 4.98 1.16 6.82.52.52 1.12.93 1.75 1.22l-.5 1.95c-1-.4-1.88-.97-2.66-1.75z"
   }));
 };
 var InstaIcon = function InstaIcon(props) {
@@ -240,9 +269,9 @@ module.exports = __webpack_require__(17);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__ = __webpack_require__(2);
@@ -252,6 +281,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_icons__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_help_findProfile__ = __webpack_require__(10);
+
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -262,6 +296,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var styles = function styles(theme) {
+  var _logo;
+
   return {
     text: {
       marginTop: 100,
@@ -279,12 +315,9 @@ var styles = function styles(theme) {
       paddingRight: '40px',
       margin: theme.spacing.unit
     },
-    logo: {
-      marginTop: '4vw',
-      width: '70vw',
-      display: 'flex',
-      justifyContent: 'center'
-    },
+    logo: (_logo = {}, _defineProperty(_logo, theme.breakpoints.down('md'), {
+      marginTop: '4vw'
+    }), _defineProperty(_logo, "width", '70vw'), _defineProperty(_logo, "display", 'flex'), _defineProperty(_logo, "justifyContent", 'center'), _logo),
     list: {
       marginTop: '0 important',
       padding: '20px'

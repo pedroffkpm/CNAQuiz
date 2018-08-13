@@ -40,6 +40,7 @@ const styles = theme => ({
 
 const Result = (props) => {
     const { classes, id } = props;
+    console.log(props);
     const profile = findProfile(id);
     console.log('profile: ', profile);
     const { title, img, text } = profile;
@@ -73,7 +74,7 @@ const Result = (props) => {
                                     </Grid>
                                     <Grid item>
                                     <Link href='/'>
-                                        <Button variant="extendedFab">
+                                        <Button variant="extendedFab" style={{marginTop: '4vw'}}>
                                         <RestartIcon className={classes.icon} />
                                         Refazer Quiz
                                         </Button>
