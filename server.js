@@ -12,9 +12,14 @@ app.prepare()
     const server = express()
 
     server.get('/result/:id', (req, res) => {
+      if(typeof process.env.id == 'undefined') {
+        app.render(req, res, '/', {})
+      }
+      else {
       const actualPage = '/result'
       const queryParams = { id: req.params.id }
       app.render(req, res, actualPage, queryParams)
+      }
     })
 
     server.get('*', (req, res) => {

@@ -122,6 +122,8 @@ Subscribe.propTypes = {
 Subscribe.getInitialProps = async (context) => {
     const { id } = context.query
     console.log('subscribe: ', id);
+    process.env.id = id;
+    console.log('env ',process.env.id);
     return { id }
 }
 
