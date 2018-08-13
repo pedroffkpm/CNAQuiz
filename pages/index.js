@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { FbIcon, HomeIcon, InstaIcon } from '../components/icons';
+import findProfile from '../components/help/findProfile';
 
 const styles = theme => ({
     text: {
@@ -55,11 +56,16 @@ const styles = theme => ({
 });
 
 const Home = (props) => {
-    const { classes } = props;
-
+    const { classes, profile } = props;
+    var title, img, text = '';
+    if(typeof profile != 'undefined') {
+        title = profile.title;
+        img = `https://travelquiz.herokuapp.com/static/images/${profile.img}`;
+        text = profile.text;
+    }
     return (
         <div className={classes.root}>
-            <Head title="Travel Quiz" />
+            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={img}/>
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
                     <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
                     <h1 className={classes.title}>Travel Quiz</h1>
@@ -106,5 +112,13 @@ const Home = (props) => {
 Home.propTypes = {
     classes: PropTypes.object.isRequired,
 };
+
+Home.getInitialProps = async (context) => {
+    if(typeof context.query.id != 'undefined') {
+        const profile = findProfile(context.query.id)
+        return { profile: profile }
+    }
+    else return {}
+}
 
 export default withStyles(styles)(Home)

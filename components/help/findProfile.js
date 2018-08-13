@@ -5,5 +5,8 @@ export default function findProfile(id) {
         if (categories[index].id === id) {
             return categories[index]
         }
+        else {
+            return {}
+        }
     }
 }
