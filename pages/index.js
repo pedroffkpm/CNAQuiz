@@ -25,7 +25,9 @@ const styles = theme => ({
         margin: theme.spacing.unit,
     },
     logo: {
-        marginTop: '4vw',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '4vw',
+        },
         width: '70vw',
         display: 'flex',
         justifyContent: 'center',
@@ -56,19 +58,13 @@ const styles = theme => ({
 });
 
 const Home = (props) => {
-    const { classes, profile } = props;
-    var title, img, text = '';
-    if(typeof profile != 'undefined') {
-        title = profile.title;
-        img = `https://travelquiz.herokuapp.com/static/images/${profile.img}`;
-        text = profile.text;
-    }
+    const { classes} = props;
     return (
         <div className={classes.root}>
-            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={img}/>
+            <Head title="Travel Quiz" />
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
-                    <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
-                    <h1 className={classes.title}>Travel Quiz</h1>
+                <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
+                <h1 className={classes.title}>Travel Quiz</h1>
                 <Grid item xs={12}>
                     <Link href='/quiz'>
                         <Button variant="extendedFab" className={classes.button}>
@@ -76,8 +72,8 @@ const Home = (props) => {
                         </Button>
                     </Link>
                 </Grid>
-                    <h3 className={classes.text}>
-                        Nos siga nas redes sociais:
+                <h3 className={classes.text}>
+                    Nos siga nas redes sociais:
                     </h3>
                 <Grid item xs={12}>
                     <Grid container className={classes.list} spacing={40} direction={"row"} justify={"center"} alignItems={"center"}>
@@ -113,12 +109,5 @@ Home.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-Home.getInitialProps = async (context) => {
-    if(typeof context.query.id != 'undefined') {
-        const profile = findProfile(context.query.id)
-        return { profile: profile }
-    }
-    else return {}
-}
 
 export default withStyles(styles)(Home)

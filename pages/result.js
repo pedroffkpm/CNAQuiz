@@ -6,8 +6,7 @@ import FacebookProvider, { Share } from 'react-facebook-sdk';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import {FbIcon} from '../components/icons';
-import Router from 'next/router';
+import { FbIcon, RestartIcon } from '../components/icons';
 
 
 const styles = theme => ({
@@ -45,32 +44,40 @@ const Result = (props) => {
     const { title, img, text } = profile;
     return (
         <div>
-            <Head title="Travel Quiz" url={`https://travelquiz.herokuapp.com/${id}`} />
+            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
             <Grid container className={classes.root}>
                 <Grid item xs={12}>
                     <Grid container alignItems="center" justify="center">
                         <Grid item>
                             <Paper className={classes.paper} elevation={4}>
-                            <Grid container spacing={24} alignItems="center" direction="column" justify="center">
-                                <Grid item>
-                                    <h2 className={classes.title}> {title} </h2>
-                                </Grid>
-                                <Grid item>
-                                        <img className={classes.image} src={`/static/images/${img}`} style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}/>
-                                </Grid>
-                                <Grid item>
-                                    <h3 style={{maxWidth: 500, margin: 'auto'}}> {text} </h3>
-                                </Grid>
-                                <Grid item>
-                                    <FacebookProvider appId='2050302261854131' xfbml>
-                                        <Share redirectURI="https://travelquiz.herokuapp.com">
-                                            <Button variant="contained"> 
-                                                <FbIcon className={classes.icon} />
-                                                Compartilhar
+                                <Grid container spacing={24} alignItems="center" direction="column" justify="center">
+                                    <Grid item>
+                                        <h2 className={classes.title}> {title} </h2>
+                                    </Grid>
+                                    <Grid item>
+                                        <img className={classes.image} src={`/static/images/${img}`} style={{ boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }} />
+                                    </Grid>
+                                    <Grid item>
+                                        <h3 style={{ maxWidth: 500, margin: 'auto' }}> {text} </h3>
+                                    </Grid>
+                                    <Grid item>
+                                        <FacebookProvider appId='2050302261854131' xfbml>
+                                            <Share redirectURI="https://travelquiz.herokuapp.com">
+                                                <Button variant="contained">
+                                                    <FbIcon className={classes.icon} />
+                                                    Compartilhar
                                             </Button>
-                                        </Share>
-                                    </FacebookProvider>
-                                </Grid>
+                                            </Share>
+                                        </FacebookProvider>
+                                    </Grid>
+                                    <Grid item>
+                                    <Link href='/'>
+                                        <Button variant="extendedFab">
+                                        <RestartIcon className={classes.icon} />
+                                        Refazer Quiz
+                                        </Button>
+                                    </Link>
+                                    </Grid>
                                 </Grid>
                             </Paper>
                         </Grid>
