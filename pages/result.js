@@ -6,6 +6,7 @@ import FacebookProvider, { Share } from 'react-facebook-sdk';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import Link from 'next/link'
 import { FbIcon, RestartIcon } from '../components/icons';
 
 

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import Head from '../components/head';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
