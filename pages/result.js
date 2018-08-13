@@ -74,7 +74,7 @@ const Result = (props) => {
                                     </Grid>
                                     <Grid item>
                                     <Link href='/'>
-                                        <Button variant="extendedFab" style={{marginTop: '4vw'}}>
+                                        <Button variant="extendedFab">
                                         <RestartIcon className={classes.icon} />
                                         Refazer Quiz
                                         </Button>

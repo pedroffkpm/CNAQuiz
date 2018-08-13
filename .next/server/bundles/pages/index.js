@@ -200,13 +200,15 @@ module.exports = require("next/head");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_categories_json__);
 
 function findProfile(id) {
+  var profile = {};
+
   for (var index in __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a) {
     if (__WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index].id === id) {
-      return __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index];
+      profile = __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index];
     }
   }
 
-  return {};
+  return profile;
 }
 
 /***/ }),
