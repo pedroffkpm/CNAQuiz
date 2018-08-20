@@ -43,7 +43,6 @@ const Result = (props) => {
     console.log(props);
     const profile = findProfile(id);
     console.log('profile: ', profile);
-    console.log(window.location.origin);
     const { title, img, text } = profile;
     return (
         <div>
