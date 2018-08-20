@@ -46,7 +46,8 @@ const Result = (props) => {
     const { title, img, text } = profile;
     return (
         <div>
-            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
+            {/* <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} /> */}
+            <Head appId='2050302261854131' url={`${window.location.origin}/${id}`}/>
             <Grid container className={classes.root}>
                 <Grid item xs={12}>
                     <Grid container alignItems="center" justify="center">

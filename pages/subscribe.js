@@ -1,5 +1,3 @@
-
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -13,26 +11,15 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
     },
-    logo: {
-        width: '70vw',
-        display: 'flex',
-        justifyContent: 'center',
-    },
-    list: {
-        margin: '30',
-        padding: '30px',
-    },
     link: {
         marginLeft: '33.3%',
         resize: 'both',
         maxHeight: '4vw',
     },
-
     title: {
         fontFamily: 'Futura-Bold,-apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif',
         marginTop: '5vw',
         marginBottom: '2vw',
-        width: '100%',
         paddingTop: '0',
         lineHeight: '1.15',
         textAlign: 'center',
@@ -69,42 +56,46 @@ class Subscribe extends Component {
 
     render() {
         const { classes } = this.props;
-        
+
         console.log(this.props.id)
         return (
             <div className={classes.root}>
                 <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
                     <form onSubmit={this.onSubmit}>
-                        <Grid item xs>
-                            <h2 className={classes.title}> Quase lá! </h2>
+                        <Grid container direction={'row'} justify={"center"} alignItems={"center"}>
+                            <Grid item>
+                                <h2 className={classes.title}> Quase lá! </h2>
+                            </Grid>
                         </Grid>
-                        <Grid item xs>
-                            <h3 style={{ marginTop: '10vw', marginBottom: '2vw', fontFamily: 'Arial' }}>
+                        <Grid container direction={'row'} justify={"center"} alignItems={"center"}>
+                            <Grid item xs={10}>
+                            <h3 style={{ marginTop: '10vw', marginBottom: '2vw', fontFamily: 'Arial', textAlign: 'center' }}>
                                 Cadastre o seu e-mail para ficar por dentro de todas as nossas novidades!
-                </h3>
+                                        </h3>
                         </Grid>
-                        <Grid item xs>
-                            <div style={{ marginLeft: '4vw', marginRight: '4vw' }}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    placeholder="exemplo@exemplo.com"
-                                    label="Email"
-                                    type="email"
-                                    error={this.state.error}
-                                    onChange={this.onChange.bind(this)}
-                                    value={this.state.email}
-                                    style={{ marginTop: '2%' }}
-                                />
-                            </div>
+                        </Grid>
+                        <Grid container direction={'row'} justify={"center"} alignItems={"center"}>
+                            <Grid item xs={10}>
+                            <TextField
+                                required
+                                fullWidth
+                                placeholder="exemplo@exemplo.com"
+                                label="Email"
+                                type="email"
+                                error={this.state.error}
+                                onChange={this.onChange.bind(this)}
+                                value={this.state.email}
+                                style={{ marginTop: '2%' }}
+                            />
+                        </Grid>
                         </Grid>
                         <Grid container direction={'row'} justify={"center"} alignItems={"center"}>
                             <Grid item xs={2}>
-                                    <Button variant='extendedFab' type="submit"
-                                            style={{ marginTop: '2vw' }}
-                                            onClick={() => {this.onSubmit; Router.push(`/result?id=${this.props.id}`, `/result/${this.props.id}`)}}
-                                            disabled={this.state.error}>
-                                        Inscrever </Button>
+                                <Button variant='extendedFab' type="submit"
+                                    style={{ marginTop: '2vw' }}
+                                    onClick={() => { this.onSubmit; Router.push(`/result?id=${this.props.id}`, `/result/${this.props.id}`) }}
+                                    disabled={this.state.error}>
+                                    Inscrever </Button>
                             </Grid>
                         </Grid>
                     </form>
@@ -123,7 +114,7 @@ Subscribe.getInitialProps = async (context) => {
     const { id } = context.query
     console.log('subscribe: ', id);
     process.env.id = id;
-    console.log('env ',process.env.id);
+    console.log('env ', process.env.id);
     return { id }
 }
 

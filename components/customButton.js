@@ -47,7 +47,7 @@ const styles = theme => ({
     bottom: 0,
     [theme.breakpoints.down('md')]: {
       fontSize: 17,
-      marginBottom: 0,
+      marginBottom: '1vh',
     }
 
   },

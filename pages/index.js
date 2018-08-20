@@ -20,6 +20,9 @@ const styles = theme => ({
     },
     button: {
         marginTop: 0,
+        [theme.breakpoints.down('md')]: {
+            marginTop: '10vh',
+        },
         paddingLeft: '40px',
         paddingRight: '40px',
         margin: theme.spacing.unit,
@@ -53,22 +56,23 @@ const styles = theme => ({
         paddingTop: '0',
         lineHeight: '1.15',
         textAlign: 'center',
-        fontSize: '48px',
+        fontSize: '5vw',
     },
 });
 
 const Home = (props) => {
-    const { classes} = props;
+    const { classes } = props;
+    const { title, img, text } = props.profile;
     return (
         <div className={classes.root}>
-            <Head title="Travel Quiz" />
+            <Head title="Travel Quiz" ogTitle={title} description={text} appId='2050302261854131' ogImage={`https://travelquiz.herokuapp.com/static/images/${img}`} />
             <Grid container spacing={40} direction={"column"} justify={"center"} alignItems={"center"}>
                 <img className={classes.logo} src="/static/Logo_EaiViajanteT.png" />
-                <h1 className={classes.title}>Travel Quiz</h1>
+                <h1 className={classes.title}>Que tipo de viajante você é?</h1>
                 <Grid item xs={12}>
                     <Link href='/quiz'>
                         <Button variant="extendedFab" className={classes.button}>
-                            Clique aqui para começar
+                            Começar o quiz
                         </Button>
                     </Link>
                 </Grid>
@@ -108,6 +112,12 @@ const Home = (props) => {
 Home.propTypes = {
     classes: PropTypes.object.isRequired,
 };
+
+Home.getInitialProps = async (context) => {
+    const { id } = context.query
+    const profile = findProfile(id)
+    return { profile }
+}
 
 
 export default withStyles(styles)(Home)
