@@ -104,23 +104,29 @@ module.exports = require("@material-ui/core/Button");
 /* 5 */
 /***/ (function(module, exports) {
 
+module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
 module.exports = [{"id":"aventura","img":"perfilAventura.gif","title":"Você tirou o Tigrão","text":"Você e seu bonde adoram aventuras na mata, acampamentos e tudo o que envolva ficar perto da mãe natureza!"},{"id":"audacioso","img":"perfilAudacioso.jpg","title":"Você tirou a Moana","text":"Você é muito curioso e não pensa muito antes de viver novas experiencias. Assim, deixa a vida te levar a lugares novos e conhece tudo que a vida tem a te oferecer."},{"id":"turista","img":"perfilTurista.jpg","title":"Você tirou o Russel","text":"Você é o turista que quer garantir que viu tudo que tinha que ver. O tempo na viagem voa, escorre pelas mãos, e por isso você faz de tudo para viver o máximo."},{"id":"consciente","img":"perfilConsciente.jpg","title":"Você tirou o Sirigueijo","text":"Você é do tipo consciente. Às vezes meio pão-duro, mas é por que não quer levar um susto com as contas de sabe se lá quantos dol."},{"id":"convencional","img":"perfilConvencional.jpeg","title":"Você tirou o Marlin","text":"Você é o turista que toma muito cuidado na hora de experimentar comidas e passeios alternativos, vai que dê ruim? Mesmo assim, não deixa de criar várias memórias em suas viagens!"},{"id":"top","img":"perfilTop.jpeg","title":"Você tirou a Elsa","text":"Suas viagens são um sonho de princesa. Você livre está para gastar uns dol a mais para ter uma viagem com mais conforto!"},{"id":"relax","img":"perfilRelax.jpg","title":"Você tirou o Lula Molusco","text":"Você é o turista paz e amor ✌️. Férias são para descansar e você sabe fazer isso muito bem passando um dia pleno na praia."},{"id":"guloso","img":"perfilGuloso.png","title":"Você tirou a Magali","text":"você é o turista que só pensa em comer! Pra você, viagem é uma oportunidade de experimentar pratos novos e deliciosos. Você sabe aproveitar cada dia muito bem, não deixando pra amanhã o que você pode comer hoje!"}]
 
 /***/ }),
-/* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
@@ -185,35 +191,13 @@ var Head = function Head(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Head);
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
 
 /***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = findProfile;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_categories_json__);
-
-function findProfile(id) {
-  var profile = {};
-
-  for (var index in __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a) {
-    if (__WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index].id === id) {
-      profile = __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index];
-    }
-  }
-
-  return profile;
-}
-
-/***/ }),
-/* 11 */,
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -223,7 +207,7 @@ function findProfile(id) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return InstaIcon; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_SvgIcon__);
 
 
@@ -249,10 +233,31 @@ var InstaIcon = function InstaIcon(props) {
 };
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/SvgIcon");
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = findProfile;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_categories_json__);
+
+function findProfile(id) {
+  var profile = {};
+
+  for (var index in __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a) {
+    if (__WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index].id === id) {
+      profile = __WEBPACK_IMPORTED_MODULE_0__static_categories_json___default.a[index];
+    }
+  }
+
+  return profile;
+}
 
 /***/ }),
 /* 14 */,
@@ -269,22 +274,27 @@ module.exports = __webpack_require__(17);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_icons__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_help_findProfile__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_head__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_styles__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_icons__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_help_findProfile__ = __webpack_require__(13);
 
+
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -298,7 +308,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var styles = function styles(theme) {
-  var _logo;
+  var _button, _logo;
 
   return {
     text: {
@@ -311,12 +321,11 @@ var styles = function styles(theme) {
       flexGrow: 1,
       margin: 0
     },
-    button: {
-      marginTop: 0,
-      paddingLeft: '40px',
-      paddingRight: '40px',
-      margin: theme.spacing.unit
-    },
+    button: (_button = {
+      marginTop: 0
+    }, _defineProperty(_button, theme.breakpoints.down('md'), {
+      marginTop: '10vh'
+    }), _defineProperty(_button, "paddingLeft", '40px'), _defineProperty(_button, "paddingRight", '40px'), _defineProperty(_button, "margin", theme.spacing.unit), _button),
     logo: (_logo = {}, _defineProperty(_logo, theme.breakpoints.down('md'), {
       marginTop: '4vw'
     }), _defineProperty(_logo, "width", '70vw'), _defineProperty(_logo, "display", 'flex'), _defineProperty(_logo, "justifyContent", 'center'), _logo),
@@ -341,76 +350,114 @@ var styles = function styles(theme) {
       paddingTop: '0',
       lineHeight: '1.15',
       textAlign: 'center',
-      fontSize: '48px'
+      fontSize: '5vw'
     }
   };
 };
 
 var Home = function Home(props) {
   var classes = props.classes;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  var _props$profile = props.profile,
+      title = _props$profile.title,
+      img = _props$profile.img,
+      text = _props$profile.text;
+  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     className: classes.root
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_head__["a" /* default */], {
-    title: "Travel Quiz"
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_head__["a" /* default */], {
+    title: "Travel Quiz",
+    ogTitle: title,
+    description: text,
+    appId: "2050302261854131",
+    ogImage: "https://travelquiz.herokuapp.com/static/images/".concat(img)
+  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     container: true,
     spacing: 40,
     direction: "column",
     justify: "center",
     alignItems: "center"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("img", {
     className: classes.logo,
     src: "/static/Logo_EaiViajanteT.png"
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h1", {
     className: classes.title
-  }, "Travel Quiz"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, "Que tipo de viajante voc\xEA \xE9?"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     item: true,
     xs: 12
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "/quiz"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button___default.a, {
     variant: "extendedFab",
     className: classes.button
-  }, "Clique aqui para come\xE7ar"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
+  }, "Come\xE7ar o quiz"))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", {
     className: classes.text
-  }, "Nos siga nas redes sociais:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, "Nos siga nas redes sociais:"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     item: true,
     xs: 12
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     container: true,
     className: classes.list,
     spacing: 40,
     direction: "row",
     justify: "center",
     alignItems: "center"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     item: true
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "https://www.facebook.com/eaiviajante/"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
     target: "_blank"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_icons__["a" /* FbIcon */], {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_icons__["a" /* FbIcon */], {
     className: classes.icon
-  })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  })))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     item: true
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "https://eaiviajante.wordpress.com/"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
     target: "_blank"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_icons__["b" /* HomeIcon */], {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_icons__["b" /* HomeIcon */], {
     className: classes.icon
-  })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Grid___default.a, {
+  })))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_core_Grid___default.a, {
     item: true
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "https://www.instagram.com/eaiviajante/"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
     target: "_blank"
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_icons__["c" /* InstaIcon */], {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_icons__["c" /* InstaIcon */], {
     className: classes.icon
   }))))))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__["withStyles"])(styles)(Home));
+Home.getInitialProps =
+/*#__PURE__*/
+function () {
+  var _ref = _asyncToGenerator(
+  /*#__PURE__*/
+  __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(context) {
+    var id, profile;
+    return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            id = context.query.id;
+            profile = Object(__WEBPACK_IMPORTED_MODULE_9__components_help_findProfile__["a" /* default */])(id);
+            return _context.abrupt("return", {
+              profile: profile
+            });
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, this);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_styles__["withStyles"])(styles)(Home));
 
 /***/ })
 /******/ ]);
