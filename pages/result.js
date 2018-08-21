@@ -64,7 +64,7 @@ const Result = (props) => {
                                     </Grid>
                                     <Grid item>
                                         <FacebookProvider appId='2050302261854131' xfbml>
-                                            <Share redirectURI="https://travelquiz.herokuapp.com">
+                                            <Share href={`https://travelquiz.herokuapp.com/${id}`} redirectURI="https://travelquiz.herokuapp.com">
                                                 <Button variant="contained">
                                                     <FbIcon className={classes.icon} />
                                                     Compartilhar
